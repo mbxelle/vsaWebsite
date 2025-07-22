@@ -1,0 +1,319 @@
+* {
+  margin: 0px;
+}
+
+:root {
+  --red: #bc3f3f;
+  --orange: #e0a867;
+  --dark-cyan: #74d1d0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: #fbecc9;
+}
+
+
+/*navbar css */
+nav {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--red);
+  z-index: 10;
+  position: fixed;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.section {
+  position: relative;
+}
+
+.anchor {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -80px;
+  left: 0;
+  visibility: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: inherit;
+}
+
+li a,
+.button a {
+  padding: 2em;
+  text-decoration: none;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: text-shadow 0.5 ease-in;
+}
+
+nav a:hover {
+  text-shadow: 0 0 5px #ffffff;
+}
+
+nav .nav_img {
+  float: left;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+#vsa_logo {
+  height: 60px;
+
+}
+
+
+/*homepage css*/
+
+
+.header {
+  display: grid;
+
+  /*note this splits homepage layout into two columns
+
+               40%                       60%
+
+  |the intro (h1, h2, btn) |             image      | */
+
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 100vh;
+  padding-top: 60px;
+}
+
+/*this is the image next to the about tmsa change font */
+.header img {
+  height: 100px;
+  width: auto;
+  margin-left: 10px;
+  margin-right: none;
+}
+
+/*the image gets a flex container; note:
+- align- items centers the image vertically
+- justify-content: centers it horizontally*/
+#image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 3.75rem;
+  letter-spacing: 1px;
+  line-height: 90%;
+}
+
+h1:hover {
+  text-shadow: 0 0 150rem #ffffff, 0 0 300rem #ffffff;
+
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 30px 0;
+  color: rgb(27, 82, 29);
+}
+
+#intro {
+  padding-left: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  /*stacks elements in column*/
+}
+
+.button {
+  background-color: var(--red);
+  padding: 20px 36px;
+  border-radius: 12px;
+  transition: background-color 0.5s ease;
+}
+
+.button:hover {
+  background-color: var(--orange);
+  cursor: pointer;
+}
+
+
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 30px;
+
+}
+
+#anchor1 {
+  justify-content: flex-start;
+  align-content: flex-start;
+
+  padding: 50px;
+  font-size: 50px;
+}
+
+.media-row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/*tiktok and instagram slideshow css*/
+
+
+
+/* TikTok slideshow */
+
+#tiktokborder {
+  border: 3.5px solid orange;
+  padding: 15px 50px 70px 50px;
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#tikslide-wrapper {
+  overflow: hidden;
+  width: 340px;
+  height: 600px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#tikslide {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slide {
+  min-width: 340px;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Navigation Buttons */
+#prev-btn,
+#next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(27, 82, 29);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+#prev-btn {
+  left: 5px;
+}
+
+#next-btn {
+  right: 5px;
+}
+
+/* Instagram section */
+.instagram-wrapper {
+  border: 3.5px solid orange;
+  padding: 16px 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.insta-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.instagram-media {
+  width: 200px;
+  height: 450px;
+  overflow: hidden;
+}
+
+/* about us messsage*/
+#aboutmessage {
+  border: 3.5px solid orange;
+  padding: 16px 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .zigzag-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .zigzag-item {
+    justify-content: center;
+  }
+}
