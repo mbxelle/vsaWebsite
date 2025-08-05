@@ -218,24 +218,30 @@ h2 {
   width: 100%;
 }
 
-
-
 .instagram-posts:hover {
   opacity: 1; /* Restore full brightness on hover */
 }
 
-
 .about-message {
   grid-area: 4/2/5/6;
+  display: flex;
+  align-items: center;
+  text-align: center;
   position: relative;
   z-index: 2;
-}
-
-.about-message p{
-
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 50px;
   background-color: #fbecc9;
-
+  font-size: 18px;
+  font-family:'Raleway', sans-serif;
+  border-radius: 50px;
+  border:2px solid rgb(27, 82, 29);
+  height: auto;          /* Ensures it only fits content */
+  align-self: start;     /* Stops stretching to grid row height */
 }
+
+
 
 
 
