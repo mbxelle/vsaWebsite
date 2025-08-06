@@ -183,7 +183,7 @@ h3 {
 
 /*about section css*/
 .about {
-  display: grid;
+  display: grid; 
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   width: 100%;
@@ -192,19 +192,18 @@ h3 {
 }
 
 .about #anchor1 {
-  grid-area: 3/3/4/6;
+  grid-area: 3/3/4/5;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 2;
 
-  scroll-margin-top: 100px;
-  /*fixes viewing when about us is pressed*/
+  scroll-margin-top: 100px; /*nsures when you click an anchor link to this ID, it appears with 100px spacing from the top.*/
 
-  width: fit-content;
-  border-radius: 50px;
+  width: fit-content; /*shrinks the background + padding to fit just around the title text*/
   padding: 10px 55px;
+  border-radius: 50px;
   background-color: #fbecc9;
   border: 2px solid rgb(27, 82, 29);
 
@@ -245,7 +244,9 @@ h3 {
   z-index: 2;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 50px;
+
+  width: fit-content;
+  padding: 30px;
   background-color: #fbecc9;
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
@@ -279,6 +280,10 @@ h3 {
   z-index: 3;
   background: none;
   border: none;
+}
+.social-icons a img:hover {
+  transform: scale(1.1);  
+  box-shadow: 0 0 30px white; 
 }
 
 
