@@ -97,7 +97,7 @@ nav .nav_img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 40px;
+  padding: 200px 40px 80px;
   gap: 60px;
   flex-wrap: wrap;
   background-color: #fbecc9;
@@ -110,10 +110,6 @@ nav .nav_img {
   max-width: 100%;
 }
 
-
-/*the image gets a flex container; note:
-- align- items centers the image vertically
-- justify-content: centers it horizontally*/
 #image {
   display: flex;
   align-items: center;
@@ -130,10 +126,6 @@ h1 {
   line-height: 90%;
 }
 
-h1:hover {
-  text-shadow: 0 0 150rem #ffffff, 0 0 300rem #ffffff;
-
-}
 
 h2 {
   font-family: "Raleway", sans-serif;
@@ -216,6 +208,7 @@ h3 {
   opacity: 0.3;
   /* Faded look */
   transition: opacity 0.3s ease;
+  border:1px solid rgb(20, 63, 22);
 }
 
 .instagram-media {
@@ -242,9 +235,6 @@ h3 {
   width: fit-content;
   padding: 30px;
   background-color: #fbecc9;
-  font-size: 18px;
-  font-family: 'Raleway', sans-serif;
-  color: rgb(20, 63, 22);
   border-radius: 50px;
   border: 2px solid rgb(27, 82, 29);
   height: auto;
@@ -253,6 +243,13 @@ h3 {
   /* stops stretching to grid row height */
 }
 
+.about-message{
+font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(20, 63, 22);
+    letter-spacing: 1.5px;
+  line-height: 20px;
+}
 .social-icons {
   grid-area: 5/2/6/6;
   display: flex;
