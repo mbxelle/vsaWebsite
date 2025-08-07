@@ -94,26 +94,22 @@ nav .nav_img {
 
 
 .header {
-  display: grid;
-
-  /*note this splits homepage layout into two columns
-
-               40%                       60%
-
-  |the intro (h1, h2, btn) |             image      | */
-
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 100vh;
-  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  gap: 60px;
+  flex-wrap: wrap;
+  background-color: #fbecc9;
 }
 
 /*this is the image next to the about tmsa change font */
-.header img {
-  height: 100px;
-  width: auto;
-  margin-left: 10px;
-  margin-right: none;
+#image img {
+  width: 180px;
+  height: auto;
+  max-width: 100%;
 }
+
 
 /*the image gets a flex container; note:
 - align- items centers the image vertically
@@ -160,13 +156,12 @@ h3 {
 
 
 #intro {
-  padding-left: 100px;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
-  /*stacks elements in column*/
+  align-items: flex-start;
+  max-width: 600px;
 }
+
 
 .button {
   background-color: var(--red);
@@ -301,9 +296,6 @@ h3 {
   scroll-margin-top: 100px;
 }
 
-#anchor h3{
-  border: 3px soild white;
-}
 
 .member-card {
   background-color: #f6edd9;
