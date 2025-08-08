@@ -170,7 +170,7 @@ h3 {
 
 /*-------------------------------about section css-----------------------------------*/
 .about {
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   width: 100%;
@@ -186,9 +186,11 @@ h3 {
   position: relative;
   z-index: 2;
 
-  scroll-margin-top: 100px; /*nsures when you click an anchor link to this ID, it appears with 100px spacing from the top.*/
+  scroll-margin-top: 100px;
+  /*nsures when you click an anchor link to this ID, it appears with 100px spacing from the top.*/
 
-  width: fit-content; /*shrinks the background + padding to fit just around the title text*/
+  width: fit-content;
+  /*shrinks the background + padding to fit just around the title text*/
   padding: 10px 55px;
   border-radius: 50px;
   background-color: #fbecc9;
@@ -208,7 +210,7 @@ h3 {
   opacity: 0.3;
   /* Faded look */
   transition: opacity 0.3s ease;
-  border:1px solid rgb(20, 63, 22);
+  border: 1px solid rgb(20, 63, 22);
 }
 
 .instagram-media {
@@ -243,13 +245,14 @@ h3 {
   /* stops stretching to grid row height */
 }
 
-.about-message{
-font-size: 18px;
+.about-message {
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;
   color: rgb(20, 63, 22);
-    letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
   line-height: 20px;
 }
+
 .social-icons {
   grid-area: 5/2/6/6;
   display: flex;
@@ -273,11 +276,35 @@ font-size: 18px;
 }
 
 .social-icons a img:hover {
-  transform: scale(1.1);  
-  box-shadow: 0 0 30px white; 
+  transform: scale(1.1);
+  box-shadow: 0 0 30px white;
 }
 
-/*-----------------------------------------------------------------------------*/
+/*----------------------------events section css---------------------------------*/
+
+.news-ticker {
+  background: rgb(189, 97, 0);
+  border-top: 3px solid rgb(27, 82, 29);
+  border-bottom: 3px solid rgb(27, 82, 29);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  display: inline-block;    
+  animation: scroll 20s linear infinite; 
+}
+.ticker-track span {
+  display: inline-block;
+  padding: 0 2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: rgb(255, 240, 152);
+}
+@keyframes scroll {
+  0%   { transform: translateX(-100%); }   
+   100% { transform: translateX(100%); }
+}
 
 
 /*---------------------------exec section css----------------------------------*/
@@ -289,7 +316,7 @@ font-size: 18px;
   background-image: url('water.png');
 }
 
-#anchor3{
+#anchor3 {
   scroll-margin-top: 100px;
 }
 
