@@ -124,6 +124,7 @@ h1 {
   font-size: 3.75rem;
   letter-spacing: 1px;
   line-height: 90%;
+  -webkit-text-stroke: 2px rgb(4, 62, 4);
 }
 
 
@@ -171,12 +172,11 @@ h3 {
 /*-------------------------------about section css-----------------------------------*/
 .about {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   width: 100%;
   min-height: 300px;
   position: relative;
-
 }
 
 .about #anchor1 {
@@ -206,25 +206,31 @@ h3 {
   position: relative;
   z-index: 0;
   margin: auto;
-  opacity: 0.3;
-  /* Faded look */
-  transition: opacity 0.3s ease;
+  overflow: visible;
+  opacity: .2;
+  transition: opacity 0.4s ease;
   border: 1px solid rgb(20, 63, 22);
 }
+
+.about .about-instagram:hover {
+  grid-area: 2/1/6/7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+  margin: auto;
+  overflow: visible;
+  opacity: 1;
+  border: 1px solid rgb(20, 63, 22);
+}
+
 
 .instagram-media {
   max-width: 100%;
   min-width: auto;
   width: 100%;
-}
-
-.about .about-instagram blockquote.instagram-media {
-  transition: filter 0.4s ease, opacity 0.4s ease;
-}
-
-.about .about-instagram blockquote.instagram-media:hover {
-  filter: brightness(1.5) contrast(1.2);
-  opacity: 0.6;
 }
 
 .about-message {
@@ -410,7 +416,7 @@ h3 {
   font-size: 0.95rem;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  color: rgb(255, 240, 152);
+  color:rgb(186, 185, 123);
 }
 
 
