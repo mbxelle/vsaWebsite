@@ -363,11 +363,14 @@ h3 {
   letter-spacing: 1px;
   line-height: 90%;
 }
+
 .member-card {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* horizontal centering for all children */
-  text-align: center;    /* center text too */
+  align-items: center;
+  /* horizontal centering for all children */
+  text-align: center;
+  /* center text too */
   padding: 20px;
   border: 2px solid rgb(255, 240, 152);
   border-radius: 16px;
@@ -377,14 +380,14 @@ h3 {
 }
 
 .member-card img {
-  display: block;     
+  display: block;
   width: 150px;
   height: 200px;
-  object-fit: cover;   
-  object-position: center; 
+  object-fit: cover;
+  object-position: center;
   border: 2px solid rgb(255, 240, 152);
   border-radius: 2%;
-  margin-bottom: 12px;  
+  margin-bottom: 12px;
 }
 
 
@@ -397,6 +400,7 @@ h3 {
 .member-card h4 {
   font-size: 1.1rem;
   font-weight: 700;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 6px;
   color: rgb(255, 240, 152);
   -webkit-text-stroke: 0.75px rgb(189, 97, 0);
@@ -405,6 +409,7 @@ h3 {
 .member-card p {
   font-size: 0.95rem;
   margin: 0;
+  font-family: 'Raleway', sans-serif;
   color: rgb(255, 240, 152);
 }
 
