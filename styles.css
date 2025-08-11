@@ -4,7 +4,7 @@
 
 :root {
   --red: #bc3f3f;
-  --orange:  rgb(189, 97, 0);
+  --orange: rgb(189, 97, 0);
   --dark-cyan: #74d1d0;
 }
 
@@ -63,7 +63,7 @@ li a,
 .button a {
   padding: 2em;
   text-decoration: none;
-  color: white;
+  color: rgb(253, 244, 195);
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 15px;
@@ -120,7 +120,7 @@ h1 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: var(--orange);
-  font-weight: 700;
+  font-weight: 750;
   font-size: 3.75rem;
   letter-spacing: 1px;
   line-height: 90%;
@@ -176,29 +176,26 @@ h3 {
   width: 100%;
   min-height: 300px;
   position: relative;
-  
+
 }
 
 .about #anchor1 {
-  grid-area: 3/3/4/5;
+  grid-area: 3 / 2 / 4 / 6;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 2;
-
   scroll-margin-top: 100px;
-  /*nsures when you click an anchor link to this ID, it appears with 100px spacing from the top.*/
-
-  width: fit-content;
-  /*shrinks the background + padding to fit just around the title text*/
-  padding: 10px 55px;
+  width: max-content;
+  padding: 30px;
   border-radius: 50px;
   background-color: #fbecc9;
   border: 2px solid rgb(27, 82, 29);
-   -webkit-text-stroke: 2px rgb(4, 62, 4);
-
+  -webkit-text-stroke: 2px rgb(4, 62, 4);
+  place-self: center;
 }
+
 
 .about .about-instagram {
   grid-area: 2/1/6/7;
@@ -228,7 +225,7 @@ h3 {
 .about .about-instagram blockquote.instagram-media:hover {
   filter: brightness(1.5) contrast(1.2);
   opacity: 0.6;
-} 
+}
 
 .about-message {
   grid-area: 4/2/5/6;
@@ -297,9 +294,10 @@ h3 {
 }
 
 .ticker-track {
-  display: inline-block;    
-  animation: scroll 20s linear infinite; 
+  display: inline-block;
+  animation: scroll 20s linear infinite;
 }
+
 .ticker-track span {
   display: inline-block;
   padding: 0 2rem;
@@ -307,11 +305,18 @@ h3 {
   font-weight: 600;
   color: rgb(255, 240, 152);
 }
+
 @keyframes scroll {
-  0%   { transform: translateX(-100%); }   
-   100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
-#anchor2{
+
+#anchor2 {
   scroll-margin-top: 100px;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -331,56 +336,77 @@ h3 {
   gap: 24px;
   padding: 40px 20px;
   background-image: url('water.png');
+  position: relative;
+}
+
+.execs::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  inset: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.execs>* {
+  position: relative;
+  z-index: 1;
 }
 
 #anchor3 {
   scroll-margin-top: 100px;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: rgb(189, 97, 0);
+  color: rgb(255, 240, 152);
   -webkit-text-stroke: 3px rgb(4, 62, 4);
   font-weight: 700;
   font-size: 3.75rem;
   letter-spacing: 1px;
   line-height: 90%;
 }
-
-
 .member-card {
-  background-color: #f6edd9;
-  border: 2px solid rgb(27, 82, 29);
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontal centering for all children */
+  text-align: center;    /* center text too */
   padding: 20px;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  color: rgb(27, 82, 29);
+  border: 2px solid rgb(255, 240, 152);
+  border-radius: 16px;
+  background-color: #122f13;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.member-card img {
+  display: block;     
+  width: 150px;
+  height: 200px;
+  object-fit: cover;   
+  object-position: center; 
+  border: 2px solid rgb(255, 240, 152);
+  border-radius: 2%;
+  margin-bottom: 12px;  
+}
+
 
 .member-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.member-card img {
-  width: 150px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 2%;
-  border: 2px solid rgb(27, 82, 29);
-  margin-bottom: 12px;
-}
 
 .member-card h4 {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 6px;
+  color: rgb(255, 240, 152);
+  -webkit-text-stroke: 0.75px rgb(189, 97, 0);
 }
 
 .member-card p {
   font-size: 0.95rem;
   margin: 0;
+  color: rgb(255, 240, 152);
 }
+
 
 /*-----------------------------------------------------------------------------*/
