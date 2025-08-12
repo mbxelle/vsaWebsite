@@ -383,12 +383,8 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.event-widget1 span,.event-widget p {
-  display: block;
-}
 
 .event-month {
-  display: block;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: rgb(20, 63, 22);
@@ -399,16 +395,48 @@ h3 {
 }
 
 .event-day {
-  display: block;
+  padding: 7px;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: rgb(20, 63, 22);
-  font-weight: 400;
+  font-weight: 800;
   font-size: 18px;
   letter-spacing: .3px;
   line-height: 90%;
 }
 
+.event-name {
+  padding: 7px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: var(--orange);
+  -webkit-text-stroke: 1.5px rgb(4, 62, 4);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: .3px;
+  line-height: 90%;
+}
+
+.event-time {
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: rgb(20, 63, 22);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: .3px;
+  line-height: 90%;
+}
+
+.event-discription {
+  text-align: center; 
+  font-family: "Montserrat", sans-serif;
+  color: rgb(20, 63, 22);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: .3px;
+  line-height: 90%;
+}
 
 /*---Happening Now Section---*/
 
