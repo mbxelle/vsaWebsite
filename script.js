@@ -31,5 +31,14 @@ function to24(t){
 let [start, end] = timeText.split(/–|-/).map(t => t.trim());
 let dates = `${dateStr}T${to24(start)}/${dateStr}T${to24(end)}`;
 
+//builds google calendar link
+let tz = 'America/Toronto'; // Your timezone
+let url = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+          `&text=${encodeURIComponent(title)}` +
+          `&dates=${dates}` +
+          `&details=${encodeURIComponent(desc)}` +
+          `&ctz=${encodeURIComponent(tz)}`;
+
+
 
 })
