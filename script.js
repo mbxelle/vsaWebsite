@@ -4,7 +4,7 @@ document.querySelectorAll('.event-widget1').forEach(ev => {
 let monthName = ev.querySelector('.event-month').textContent.trim();
 let day = ev.querySelector('.event-day').textContent.trim();
 let title = ev.querySelector('.event-name').textContent.trim();
-let desc = ev.querySelector('.event-discription').textContent.trim();
+let desc = ev.querySelector('.event-description').textContent.trim();
 let timeText = ev.querySelector('.event-time').textContent;
 
 //note: GOOGLE CALENDAR NEEDS THIS FORMAT: YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS TO SAVE CORRECT DATE AND TIME
