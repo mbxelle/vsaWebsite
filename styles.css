@@ -400,10 +400,12 @@ h3 {
   align-items: center;
   opacity: 0;
   transition: 0.3s;
+  pointer-events: none;
 }
 
 .event-widget1:hover .event-overlay {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .event-overlay a {
@@ -413,8 +415,8 @@ h3 {
 }
 
 .event-overlay img {
-    width: fit-content; 
-    height: fit-content;
+  width: fit-content;
+  height: fit-content;
 }
 
 .event-month {
@@ -461,7 +463,7 @@ h3 {
   line-height: 90%;
 }
 
-.event-discription {
+.event-description {
   padding: 3px;
   text-align: center;
   font-family: "Montserrat", sans-serif;

@@ -7,13 +7,31 @@ let title = ev.querySelector('.event-name').textContent.trim();
 let desc = ev.querySelector('.event-description').textContent.trim();
 let timeText = ev.querySelector('.event-time').textContent;
 
+if (!monthName || !day || !timeText) return;
+
 //note: GOOGLE CALENDAR NEEDS THIS FORMAT: YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS TO SAVE CORRECT DATE AND TIME
 //turns month name into month number
-let monthNum = new Date(`${monthName} 1, ${new Date().getFullYear()}`).getMonth() + 1;
-//make sure it is two digits and turns number into string 
-monthNum = String(monthNum).padStart(2, '0');
-//build final date string in format YYYYMMDD 
-let dateStr = `${new Date().getFullYear()}${monthNum}${day.padStart(2,'0')}`;
+const monthMap = {
+  jan:'01', january:'01',
+  feb:'02', february:'02',
+  mar:'03', march:'03',
+  apr:'04', april:'04',
+  may:'05',
+  jun:'06', june:'06',
+  jul:'07', july:'07',
+  aug:'08', august:'08',
+  sep:'09', sept:'09', september:'09',
+  oct:'10', october:'10',
+  nov:'11', november:'11',
+  dec:'12', december:'12'
+};
+
+const key = monthName.toLowerCase().trim();
+const monthNum = monthMap[key];
+if (!monthNum) { console.warn('Unrecognized month:', monthName); return; }
+
+const year = new Date().getFullYear();
+const dateStr = `${year}${monthNum}${day.padStart(2,'0')}`;
 
 //note: google calendar needs HHMMSS format for time 
 function to24(t){
@@ -40,8 +58,8 @@ let url = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
           `&ctz=${encodeURIComponent(tz)}`;
 
 //add link to overlay
-let link = ev.querySelector('.event-overlay a');
-if (link) link.href = url;
+  const link = ev.querySelector('.event-overlay a');
+  if (link) link.href = url;
 
 
 })
