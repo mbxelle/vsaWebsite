@@ -27,4 +27,9 @@ function to24(t){
   return String(h).padStart(2,'0') + String(min).padStart(2,'0') + '00';
 }
 
+//split start and end times
+let [start, end] = timeText.split(/–|-/).map(t => t.trim());
+let dates = `${dateStr}T${to24(start)}/${dateStr}T${to24(end)}`;
+
+
 })
