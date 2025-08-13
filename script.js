@@ -39,6 +39,9 @@ let url = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
           `&details=${encodeURIComponent(desc)}` +
           `&ctz=${encodeURIComponent(tz)}`;
 
+//add link to overlay
+let link = ev.querySelector('.event-overlay a');
+if (link) link.href = url;
 
 
 })
