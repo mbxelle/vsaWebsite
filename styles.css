@@ -372,26 +372,27 @@ h3 {
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: rgb(255, 240, 152);
+  color: var(--orange);
   -webkit-text-stroke: 1.5px rgb(4, 62, 4);
   font-weight: 600;
   font-size: 1.75rem;
   letter-spacing: .3px;
   line-height: 90%;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 
 .event-widget {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* two equal columns */
+  grid-template-columns: 1fr 100px;
   flex-direction: column;
-  height: 160px;
+  height: 100px;
+  width: 400px;
   border: 2px solid white;
   border-radius: 12px;
   background-color: #fbd98a;
   padding: 12px;
-  gap: 8px;
+  gap: 20px;
 }
 
 /* Left side = title top + time bottom */
@@ -400,7 +401,15 @@ h3 {
   flex-direction: column;
   justify-content: space-between; 
   align-items: flex-start;
-  padding: 6px;
+  padding-left: 10px; 
+}
+
+.event-name,
+.event-description,
+.event-time {
+  padding: 0 !important;  
+  margin: 0;                
+  text-align: left;
 }
 /* Right side = centered square date box */
 .event-right {
@@ -409,6 +418,8 @@ h3 {
   justify-content: center;
   align-items: center;
   background: white;
+  height: 70px;
+  width: 80px;
   border-radius: 8px;
   padding: 12px;
 }
@@ -417,10 +428,11 @@ h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: rgb(20, 63, 22);
-  font-weight: 300;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 15px;
   letter-spacing: .3px;
   line-height: 90%;
+  margin-bottom: 9px;
 }
 
 .event-day {
@@ -435,7 +447,7 @@ h3 {
 }
 
 .event-name {
-  padding: 7px;
+  text-align: left;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: var(--orange);
@@ -444,10 +456,22 @@ h3 {
   font-size: 18px;
   letter-spacing: .3px;
   line-height: 90%;
+  margin-bottom: 7px; 
 }
 
+
+.event-description {
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(20, 63, 22);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: .3px;
+  line-height: 90%;
+
+}
 .event-time {
-  padding: 5px;
+  text-align: left;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: rgb(165, 109, 4);
@@ -455,19 +479,8 @@ h3 {
   font-size: 15px;
   letter-spacing: .3px;
   line-height: 90%;
+  margin-top: auto;  
 }
-
-.event-description {
-  padding: 3px;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  color: rgb(20, 63, 22);
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: .3px;
-  line-height: 90%;
-}
-
 /*---Event Poster Section---*/
 
 .now-section{
