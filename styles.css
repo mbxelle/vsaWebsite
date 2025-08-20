@@ -318,7 +318,7 @@ h3 {
 
 .ticker-track {
   display: inline-block;
-  animation: scroll 20s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .ticker-track span {
@@ -339,7 +339,7 @@ h3 {
   }
 }
 /*bottom news ticker css */
-.news-ticker.bottom {
+.news-ticker-bottom {
   grid-column: 1 / -1;
   /* stretch across all grid columns */
   width: 100vw;
@@ -348,11 +348,11 @@ h3 {
   border-bottom: 3px solid rgb(27, 82, 29);
   overflow: hidden;
   white-space: nowrap;
-  height: 20px;
+  height: 24px;
   margin-top: 16px;           
 }
 
-.news-ticker.bottom .ticker-track {
+.news-ticker-bottom .ticker-track {
   animation: scroll 30s linear infinite; /* slower scroll */
 }
 
