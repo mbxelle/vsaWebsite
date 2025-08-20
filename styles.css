@@ -338,6 +338,23 @@ h3 {
     transform: translateX(100%);
   }
 }
+/*bottom news ticker css */
+.news-ticker.bottom {
+  grid-column: 1 / -1;
+  /* stretch across all grid columns */
+  width: 100vw;
+  background: rgb(189, 97, 0);
+  border-top: 3px solid rgb(27, 82, 29);
+  border-bottom: 3px solid rgb(27, 82, 29);
+  overflow: hidden;
+  white-space: nowrap;
+  height: 20px;
+  margin-top: 16px;           
+}
+
+.news-ticker.bottom .ticker-track {
+  animation: scroll 30s linear infinite; /* slower scroll */
+}
 
 /*---Our Events Heading---*/
 #anchor2 {
@@ -473,7 +490,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
   color: rgb(20, 63, 22);
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: .4px;
   line-height: 90%;
   margin-bottom: 8px;
