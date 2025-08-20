@@ -348,11 +348,11 @@ h3 {
   margin: 8px 0;
   line-height: 1.1;
   color: rgb(189, 97, 0);
-  -webkit-text-stroke: 3px rgb(4, 62, 4);
+  -webkit-text-stroke: 3px rgb(189, 97, 0);
   font-weight: 700;
   font-size: 3.75rem;
   letter-spacing: 1px;
-  scroll-margin-top: 140px;
+  scroll-margin-top: 140px  ;
 }
 
 
@@ -373,10 +373,9 @@ h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: var(--orange);
-  -webkit-text-stroke: 1.5px rgb(4, 62, 4);
   font-weight: 600;
   font-size: 1.75rem;
-  letter-spacing: .3px;
+  letter-spacing: .7px;
   line-height: 90%;
   margin: 10px;
 }
@@ -386,9 +385,10 @@ h3 {
   grid-template-columns: 1fr 100px;
   flex-direction: column;
   height: 100px;
-  width: 400px;
+  width: 450px;
   border-radius: 12px;
   background-color: #fbd98a;
+  border: 2px solid white;
   padding: 12px;
   gap: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -446,10 +446,10 @@ h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: var(--orange);
-  -webkit-text-stroke: 1.5px rgb(4, 62, 4);
+  -webkit-text-stroke: .9px rgb(4, 62, 4);
   font-weight: 600;
   font-size: 18px;
-  letter-spacing: .3px;
+  letter-spacing: .6px;
   line-height: 90%;
   margin-top: 7px;
   margin-bottom: 6px; 
@@ -463,7 +463,7 @@ h3 {
   color: rgb(20, 63, 22);
   font-weight: 400;
   font-size: 13px;
-  letter-spacing: .3px;
+  letter-spacing: .4px;
   line-height: 90%;
   margin-bottom: 8px;
 }
@@ -472,7 +472,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: rgb(165, 109, 4);
-  font-weight: 400;
+  font-weight: 700;
   font-size: 15px;
   letter-spacing: .3px;
   line-height: 90%;
@@ -481,27 +481,32 @@ h3 {
 /*---Event Poster Section---*/
 
 .now-section{
-  grid-area: 3 / 3 / 4 / 5;      
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(min-content, auto);
-  gap: 12px;
-}
+  grid-area: 3 / 2 / 4 / 3;
 
-.now-title{
-  grid-area: 3 / 3 / 4 / 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  background: #fff7e0;
+  border: 2px solid rgb(27, 82, 29);
+  border-radius: 16px;
+  padding: 16px;
+}
+#now-title{
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: rgb(255, 240, 152);
-  -webkit-text-stroke: 1.5px rgb(4, 62, 4);
+  color: var(--orange);
   font-weight: 600;
   font-size: 1.75rem;
-  letter-spacing: .3px;
+  letter-spacing: .7px;
   line-height: 90%;
+  margin: 10px;
 }
+
 .now-section img{
   grid-area: 2/2/3/3;
   display: flex;
