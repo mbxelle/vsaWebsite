@@ -488,10 +488,6 @@ h3 {
   align-items: center;
   gap: 12px;
 
-  background: #fff7e0;
-  border: 2px solid rgb(27, 82, 29);
-  border-radius: 16px;
-  padding: 16px;
 }
 #now-title{
   display: flex;
