@@ -387,11 +387,11 @@ h3 {
   flex-direction: column;
   height: 100px;
   width: 400px;
-  border: 2px solid white;
   border-radius: 12px;
   background-color: #fbd98a;
   padding: 12px;
   gap: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* Left side = title top + time bottom */
