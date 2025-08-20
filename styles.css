@@ -380,6 +380,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+    text-align: center;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: var(--orange);
@@ -456,9 +457,9 @@ h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: var(--orange);
-  -webkit-text-stroke: .9px rgb(4, 62, 4);
-  font-weight: 600;
-  font-size: 18px;
+  -webkit-text-stroke: .7px var(--orange);
+  font-weight: 900;
+  font-size: 20px;
   letter-spacing: .6px;
   line-height: 90%;
   margin-top: 7px;
@@ -472,7 +473,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
   color: rgb(20, 63, 22);
   font-weight: 400;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: .4px;
   line-height: 90%;
   margin-bottom: 8px;
@@ -517,7 +518,6 @@ h3 {
 }
 
 .now-section img {
-  grid-area: 2/2/3/3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -535,6 +535,29 @@ h3 {
   height: auto;
   object-fit: cover;
 }
+
+/*button to eventbrite*/
+.event-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  background-color: rgb(189, 97, 0); /* same as ticker orange */
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.event-btn:hover {
+  background-color: rgb(27, 82, 29); /* dark green */
+  transform: scale(1.05);
+}
+
 
 
 
