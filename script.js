@@ -1,65 +1,39 @@
-//takes information from html event widgets for users to add to calendar
-document.querySelectorAll('.event-widget1').forEach(ev => {
-//selects month, day, name of event, description and time 
-let monthName = ev.querySelector('.event-month').textContent.trim();
-let day = ev.querySelector('.event-day').textContent.trim();
-let title = ev.querySelector('.event-name').textContent.trim();
-let desc = ev.querySelector('.event-description').textContent.trim();
-let timeText = ev.querySelector('.event-time').textContent;
 
-if (!monthName || !day || !timeText) return;
+  const slides = [
+    {
+      q: "Where is the event?",
+      a: "Tecumseh Auditorium, Sept 12, 6–9pm ($7)."
+    },
+    {
+      q: "What can I expect?",
+      a: "Travel through 3 regions of Vietnam with games, food & activities!"
+    },
+    {
+      q: "How do I enter the raffle?",
+      a: "Complete 3 region activities, collect stamps in your passport = raffle entry."
+    },
+    {
+      q: "Prizes?",
+      a: "LEGO set, matcha kit, skincare bundle, disposable camera, snacks, coffee card."
+    },
+    {
+      q: "Dress code?",
+      a: "TMVSA = flight attendants • Guests = airport fits ✈️"
+    }
+  ];
 
-//note: GOOGLE CALENDAR NEEDS THIS FORMAT: YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS TO SAVE CORRECT DATE AND TIME
-//turns month name into month number
-const monthMap = {
-  jan:'01', january:'01',
-  feb:'02', february:'02',
-  mar:'03', march:'03',
-  apr:'04', april:'04',
-  may:'05',
-  jun:'06', june:'06',
-  jul:'07', july:'07',
-  aug:'08', august:'08',
-  sep:'09', sept:'09', september:'09',
-  oct:'10', october:'10',
-  nov:'11', november:'11',
-  dec:'12', december:'12'
-};
+  let idx = 0;
+  const text = document.querySelector('.bubble-text');
+  const updateSlide = () => {
+    text.innerHTML = `<span class="bubble-question">${slides[idx].q}</span><br>${slides[idx].a}`;
+  };
 
-const key = monthName.toLowerCase().trim();
-const monthNum = monthMap[key];
-if (!monthNum) { console.warn('Unrecognized month:', monthName); return; }
+  document.querySelector('.bubble-prev').onclick = () => {
+    idx = (idx - 1 + slides.length) % slides.length;
+    updateSlide();
+  };
 
-const year = new Date().getFullYear();
-const dateStr = `${year}${monthNum}${day.padStart(2,'0')}`;
-
-//note: google calendar needs HHMMSS format for time 
-function to24(t){
-  let m = t.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/i);
-  if(!m) return '';
-  let h = +m[1];
-  let min = m[2] || '00';
-  let mer = m[3] && m[3].toLowerCase();
-  if (mer === 'pm' && h !== 12) h += 12;
-  if (mer === 'am' && h === 12) h = 0;
-  return String(h).padStart(2,'0') + String(min).padStart(2,'0') + '00';
-}
-
-//split start and end times
-let [start, end] = timeText.split(/–|-/).map(t => t.trim());
-let dates = `${dateStr}T${to24(start)}/${dateStr}T${to24(end)}`;
-
-//builds google calendar link
-let tz = 'America/Toronto'; // Your timezone
-let url = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
-          `&text=${encodeURIComponent(title)}` +
-          `&dates=${dates}` +
-          `&details=${encodeURIComponent(desc)}` +
-          `&ctz=${encodeURIComponent(tz)}`;
-
-//add link to overlay
-  const link = ev.querySelector('.event-overlay a');
-  if (link) link.href = url;
-
-
-})
+  document.querySelector('.bubble-next').onclick = () => {
+    idx = (idx + 1) % slides.length;
+    updateSlide();
+  };
