@@ -381,7 +381,6 @@ h3 {
   margin: 10px;
 }
 
-
 .event-widget {
   display: grid;
   grid-template-columns: 1fr 100px;
@@ -404,13 +403,6 @@ h3 {
   padding-left: 10px; 
 }
 
-.event-name,
-.event-description,
-.event-time {
-  padding: 0 !important;  
-  margin: 0;                
-  text-align: left;
-}
 /* Right side = centered square date box */
 .event-right {
   display: flex;
@@ -425,6 +417,7 @@ h3 {
 }
 
 .event-month {
+  display: block;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: rgb(20, 63, 22);
@@ -436,6 +429,7 @@ h3 {
 }
 
 .event-day {
+  display: block;
   padding: 7px;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -447,6 +441,7 @@ h3 {
 }
 
 .event-name {
+  display: block;
   text-align: left;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -456,11 +451,13 @@ h3 {
   font-size: 18px;
   letter-spacing: .3px;
   line-height: 90%;
-  margin-bottom: 7px; 
+  margin-top: 7px;
+  margin-bottom: 6px; 
 }
 
 
 .event-description {
+  display: block;
   text-align: left;
   font-family: "Montserrat", sans-serif;
   color: rgb(20, 63, 22);
@@ -468,7 +465,7 @@ h3 {
   font-size: 13px;
   letter-spacing: .3px;
   line-height: 90%;
-
+  margin-bottom: 8px;
 }
 .event-time {
   text-align: left;
