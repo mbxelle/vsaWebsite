@@ -588,7 +588,7 @@ h3 {
 .bubble-prev, .bubble-next {
   background: #1b521d;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.25rem; 
   font-weight: bold;
   border: none;
   border-radius: 50%;
@@ -642,8 +642,10 @@ h3 {
 .btn-soon:hover{
   background-color: rgb(57, 63, 57); 
   transform: scale(1.05);
-    color: grey;
+  color: grey;
 }
+
+
 
 
 
@@ -732,4 +734,46 @@ h3 {
 }
 
 
-/*-----------------------------------------------------------------------------*/
+/*---------------------------------------Footer Css----------------------------*/
+
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
+  width: 100%;
+  height: 5rem;
+}
+
+footer p{
+  grid-area: 1/1/2/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.footer-social{
+  grid-area: 1/2/2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer-social img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  gap: 3px;
+  object-fit: cover;
+  border: 2px solid rgb(27, 82, 29);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 3;
+  background: none;
+  border: none;
+}
