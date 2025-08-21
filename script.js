@@ -1,7 +1,9 @@
+
+//------------text bubble under event poster (event section javascript)--------------------
 document.addEventListener('DOMContentLoaded', () => {
-  // Slides (edit your text here)
+  // Slides (edit your text here for event poster description and info)
   const slides = [
-    { q: "Where is the event?", a: "Tecumseh Auditorium, Sept 12, 6–9pm ($7)." },
+    { q: "Where is the event?", a: "Tecumseh Auditorium, Sept 12, 6–9pm!" },
     { q: "What can I expect?",  a: "Travel through 3 regions of Vietnam with each region having fun games & activities where you can win stamps for your chance to a raffle entry!" },
     { q: "How do I enter the raffle?", a: "Complete 3 region activities, collect stamps in your passport = raffle entry." },
     { q: "Prizes?", a: "LEGO set, matcha kit, skincare bundle, disposable camera, snacks, coffee card." }
@@ -26,10 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- autoplay + pause on hover ---
   let timer = null;
   const startAuto = () => {
-    // Respect reduced-motion
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     stopAuto();
-    timer = setInterval(next, 3000); // change slide every 4s
+    timer = setInterval(next, 3000); // change slide every 3s
   };
   const stopAuto = () => { if (timer) { clearInterval(timer); timer = null; } };
 
