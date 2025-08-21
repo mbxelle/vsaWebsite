@@ -1,39 +1,46 @@
-
+document.addEventListener('DOMContentLoaded', () => {
+  // Slides (edit your text here)
   const slides = [
-    {
-      q: "Where is the event?",
-      a: "Tecumseh Auditorium, Sept 12, 6–9pm ($7)."
-    },
-    {
-      q: "What can I expect?",
-      a: "Travel through 3 regions of Vietnam with games, food & activities!"
-    },
-    {
-      q: "How do I enter the raffle?",
-      a: "Complete 3 region activities, collect stamps in your passport = raffle entry."
-    },
-    {
-      q: "Prizes?",
-      a: "LEGO set, matcha kit, skincare bundle, disposable camera, snacks, coffee card."
-    },
-    {
-      q: "Dress code?",
-      a: "TMVSA = flight attendants • Guests = airport fits ✈️"
-    }
+    { q: "Where is the event?", a: "Tecumseh Auditorium, Sept 12, 6–9pm ($7)." },
+    { q: "What can I expect?",  a: "Travel through 3 regions of Vietnam with each region having fun games & activities where you can win stamps for your chance to a raffle entry!" },
+    { q: "How do I enter the raffle?", a: "Complete 3 region activities, collect stamps in your passport = raffle entry." },
+    { q: "Prizes?", a: "LEGO set, matcha kit, skincare bundle, disposable camera, snacks, coffee card." }
   ];
 
+  const bubble = document.querySelector('.info-bubble');
+  if (!bubble) return;
+
+  const textEl = bubble.querySelector('.bubble-text');
+  const prevBtn = bubble.querySelector('.bubble-prev');
+  const nextBtn = bubble.querySelector('.bubble-next');
+
   let idx = 0;
-  const text = document.querySelector('.bubble-text');
-  const updateSlide = () => {
-    text.innerHTML = `<span class="bubble-question">${slides[idx].q}</span><br>${slides[idx].a}`;
+  const render = () => {
+    const s = slides[idx];
+    textEl.innerHTML = `<span class="bubble-question">${s.q}</span><br>${s.a}`;
   };
 
-  document.querySelector('.bubble-prev').onclick = () => {
-    idx = (idx - 1 + slides.length) % slides.length;
-    updateSlide();
-  };
+  const next = () => { idx = (idx + 1) % slides.length; render(); };
+  const prev = () => { idx = (idx - 1 + slides.length) % slides.length; render(); };
 
-  document.querySelector('.bubble-next').onclick = () => {
-    idx = (idx + 1) % slides.length;
-    updateSlide();
+  // --- autoplay + pause on hover ---
+  let timer = null;
+  const startAuto = () => {
+    // Respect reduced-motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    stopAuto();
+    timer = setInterval(next, 3000); // change slide every 4s
   };
+  const stopAuto = () => { if (timer) { clearInterval(timer); timer = null; } };
+
+  bubble.addEventListener('mouseenter', stopAuto);
+  bubble.addEventListener('mouseleave', startAuto);
+
+  // Buttons
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+
+  // Init
+  render();
+  startAuto();
+});
