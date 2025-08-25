@@ -303,7 +303,7 @@ h3 {
 .news-ticker {
   grid-column: 1 / -1;
   /* stretch across all grid columns */
-  width: 100vw;
+  width: 100%;  
   /* expands all of viewport*/
   display: flex;
   justify-content: center;
@@ -342,7 +342,7 @@ h3 {
 .news-ticker-bottom {
   grid-column: 1 / -1;
   /* stretch across all grid columns */
-  width: 100vw;
+  width: 100%;  
   background: rgb(189, 97, 0);
   border-top: 3px solid rgb(27, 82, 29);
   border-bottom: 3px solid rgb(27, 82, 29);
@@ -374,12 +374,13 @@ h3 {
   scroll-margin-top: 140px;
 }
 
-.events-row {
+.events-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* two equal halves */
   gap: 24px;
   width: 100%;
+  align-items: start;
 }
 
 
@@ -420,6 +421,7 @@ h3 {
   padding: 12px;
   gap: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 /* Left side = title top + time bottom */
@@ -508,6 +510,51 @@ h3 {
   margin-top: auto;
 }
 
+
+
+/* event button to eventbrite */
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.event-btn {
+  display: block;
+  text-align: center;
+  width: 50%;
+  max-width: 150px;
+  margin: 10px auto 0;
+  padding: 8px 10px;  
+  background-color: rgb(189, 97, 0); /* same as ticker orange */
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 550;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 3;
+}
+
+
+.event-btn:hover{
+  background-color: rgb(42, 107, 44); 
+  transform: scale(1.05);
+  color: #fbd98a;
+} 
+
+.blur{
+   filter: blur(6px);
+   position: relative;
+   z-index: 1;  
+}
+
 /*---Event Poster Section---*/
 
 .now-section {
@@ -516,7 +563,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-
+  position: relative;
 }
 
 #now-title {
@@ -552,7 +599,8 @@ h3 {
   height: auto;
   object-fit: cover;
 }
-/*text bubble*/
+
+/* FAQ text bubble under event poster*/
 
 .info-bubble {
   display: flex;
@@ -601,54 +649,6 @@ h3 {
 .bubble-prev:hover, .bubble-next:hover {
   background: #bd6100;
 }
-
-
-
-/*button to eventbrite*/
-
-.event-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 4px;
-}
-
-.event-btn {
-  display: block;
-  text-align: center;
-  width: 50%;
-  max-width: 150px;
-  margin: 10px auto 0;
-  padding: 8px 10px;  
-  background-color: rgb(189, 97, 0); /* same as ticker orange */
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 550;
-  text-transform: uppercase;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-
-.btn-now:hover{
-  background-color: rgb(42, 107, 44); 
-  transform: scale(1.05);
-  color: #fbd98a;
-} 
-
-.btn-soon:hover{
-  background-color: rgb(57, 63, 57); 
-  transform: scale(1.05);
-  color: grey;
-}
-
-.blur{
-   filter: blur(6px);  
-}
-
 
 
 
