@@ -645,7 +645,9 @@ h3 {
   color: grey;
 }
 
-
+.blur{
+   filter: blur(6px);  
+}
 
 
 
