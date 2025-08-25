@@ -291,20 +291,28 @@ h3 {
 
 /*----------------------------events section css---------------------------------*/
 
+/* ========== EVENTS SECTION (outer two-column container) ========== */
+.events-section {
+  display: grid;                 /* outer grid */
+  grid-template-columns: 1fr 1fr;/* left = .events, right = .now-section */
+  gap: 24px;
+  width: 100%;
+  align-items: start;
+}
+
+/* ========== LEFT COLUMN INTERNAL LAYOUT ========== */
 .events {
-  display: grid;
+  display: grid;                          /* inner grid used only on the left side */
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   row-gap: 16px;
   width: 100%;
 }
 
-/*---news ticker---*/
+/* ========== TOP NEWS TICKER (spans the whole outer section) ========== */
 .news-ticker {
-  grid-column: 1 / -1;
-  /* stretch across all grid columns */
-  width: 100%;  
-  /* expands all of viewport*/
+  grid-column: 1 / -1;           /* span both columns of .events-section */
+  width: 100%;                 
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -316,6 +324,7 @@ h3 {
   height: 20px;
 }
 
+/* ticker text scroll */
 .ticker-track {
   display: inline-block;
   animation: scroll 30s linear infinite;
@@ -330,35 +339,30 @@ h3 {
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
-/*bottom news ticker css */
+
+/* ========== BOTTOM NEWS TICKER (also spans whole outer section) ========== */
 .news-ticker-bottom {
-  grid-column: 1 / -1;
-  /* stretch across all grid columns */
-  width: 100%;  
+  grid-column: 1 / -1;           /* span both columns of .events-section */
+  width: 100%;                   /* container width */
   background: rgb(189, 97, 0);
   border-top: 3px solid rgb(27, 82, 29);
   border-bottom: 3px solid rgb(27, 82, 29);
   overflow: hidden;
   white-space: nowrap;
   height: 24px;
-  margin-top: 16px;           
+  margin-top: 16px;
 }
 
 .news-ticker-bottom .ticker-track {
-  animation: scroll 30s linear infinite; /* slower scroll */
+  animation: scroll 30s linear infinite;
 }
 
-/*---Our Events Heading---*/
+/* ========== SECTION TITLE (spans whole outer section) ========== */
 #anchor2 {
-  grid-area: 2/1/3/5;
+  grid-column: 1 / -1;           /* span both columns of .events-section */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -380,7 +384,7 @@ h3 {
   /* two equal halves */
   gap: 24px;
   width: 100%;
-  align-items: start;
+
 }
 
 
@@ -413,6 +417,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 100px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100px;
   width: 500px;
   border-radius: 12px;
