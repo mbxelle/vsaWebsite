@@ -86,6 +86,9 @@ nav .nav_img {
 #vsa_logo {
   height: 100px;
 }
+
+/*language toggle*/
+
 .translate-bubble {
   position: relative;
   background: #fff8e6;
@@ -104,7 +107,7 @@ nav .nav_img {
 
 .translate-bubble:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .lang-buttons {
@@ -331,8 +334,10 @@ h3 {
 
 /* ========== EVENTS SECTION (outer two-column container) ========== */
 .events-section {
-  display: grid;                 /* outer grid */
-  grid-template-columns: 1fr 1fr;/* left = .events, right = .now-section */
+  display: grid;
+  /* outer grid */
+  grid-template-columns: 1fr 1fr;
+  /* left = .events, right = .now-section */
   gap: 24px;
   width: 100%;
   align-items: start;
@@ -340,7 +345,8 @@ h3 {
 
 /* ========== LEFT COLUMN INTERNAL LAYOUT ========== */
 .events {
-  display: grid;                          /* inner grid used only on the left side */
+  display: grid;
+  /* inner grid used only on the left side */
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   row-gap: 16px;
@@ -349,8 +355,9 @@ h3 {
 
 /* ========== TOP NEWS TICKER (spans the whole outer section) ========== */
 .news-ticker {
-  grid-column: 1 / -1;           /* span both columns of .events-section */
-  width: 100%;                 
+  grid-column: 1 / -1;
+  /* span both columns of .events-section */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -377,14 +384,21 @@ h3 {
 }
 
 @keyframes scroll {
-  0%   { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* ========== BOTTOM NEWS TICKER (also spans whole outer section) ========== */
 .news-ticker-bottom {
-  grid-column: 1 / -1;           /* span both columns of .events-section */
-  width: 100%;                   /* container width */
+  grid-column: 1 / -1;
+  /* span both columns of .events-section */
+  width: 100%;
+  /* container width */
   background: rgb(189, 97, 0);
   border-top: 3px solid rgb(27, 82, 29);
   border-bottom: 3px solid rgb(27, 82, 29);
@@ -400,7 +414,8 @@ h3 {
 
 /* ========== SECTION TITLE (spans whole outer section) ========== */
 #anchor2 {
-  grid-column: 1 / -1;           /* span both columns of .events-section */
+  grid-column: 1 / -1;
+  /* span both columns of .events-section */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -457,7 +472,7 @@ h3 {
   align-items: center;
   justify-content: center;
   height: 100px;
-   width: 500px;   
+  width: 500px;
   border-radius: 12px;
   background-color: #fbd98a;
   border: 2px solid white;
@@ -571,8 +586,9 @@ h3 {
   width: 50%;
   max-width: 150px;
   margin: 10px auto 0;
-  padding: 8px 10px;  
-  background-color: rgb(189, 97, 0); /* same as ticker orange */
+  padding: 8px 10px;
+  background-color: rgb(189, 97, 0);
+  /* same as ticker orange */
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -581,22 +597,22 @@ h3 {
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 3;
 }
 
 
-.event-btn:hover{
-  background-color: rgb(42, 107, 44); 
+.event-btn:hover {
+  background-color: rgb(42, 107, 44);
   transform: scale(1.05);
   color: #fbd98a;
-} 
+}
 
-.blur{
-   filter: blur(6px);
-   position: relative;
-   z-index: 1;  
+.blur {
+  filter: blur(6px);
+  position: relative;
+  z-index: 1;
 }
 
 /*---Event Poster Section---*/
@@ -657,9 +673,9 @@ h3 {
   padding: 12px 16px;
   max-width: 550px;
   font-family: "Montserrat", sans-serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
-  position: relative; 
+  position: relative;
   z-index: 5;
 }
 
@@ -677,10 +693,11 @@ h3 {
   font-size: 1rem;
 }
 
-.bubble-prev, .bubble-next {
+.bubble-prev,
+.bubble-next {
   background: #1b521d;
   color: #fff;
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
   font-weight: bold;
   border: none;
   border-radius: 50%;
@@ -690,7 +707,8 @@ h3 {
   transition: background 0.3s ease;
 }
 
-.bubble-prev:hover, .bubble-next:hover {
+.bubble-prev:hover,
+.bubble-next:hover {
   background: #bd6100;
 }
 
@@ -782,7 +800,7 @@ h3 {
 
 /*---------------------------------------Footer Css----------------------------*/
 
-footer{
+footer {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
@@ -792,7 +810,7 @@ footer{
   height: 7rem;
 }
 
-footer p{
+footer p {
   grid-area: 1/1/2/2;
   display: flex;
   align-items: center;
@@ -803,7 +821,7 @@ footer p{
   font-size: 18px;
 }
 
-.footer-social{
+.footer-social {
   grid-area: 1/2/2/3;
   display: flex;
   align-items: center;
