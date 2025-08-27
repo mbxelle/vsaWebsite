@@ -45,3 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
   render();
   startAuto();
 });
+
+
+// vietnamese lang toggle javascript
+
+document.getElementById("langToggle").addEventListener("click", () => {
+  const en = document.querySelector(".lang-en");
+  const vi = document.querySelector(".lang-vi");
+
+  if (en.style.display === "none") {
+    en.style.display = "flex";
+    vi.style.display = "none";
+  } else {
+    en.style.display = "none";
+    vi.style.display = "flex";
+  }
+});

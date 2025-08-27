@@ -28,7 +28,6 @@ a:hover {
   cursor: pointer;
 }
 
-
 .sticky {
   position: fixed;
   top: 0;
@@ -90,7 +89,6 @@ nav .nav_img {
 
 
 /*homepage css*/
-
 
 .header {
   display: flex;
