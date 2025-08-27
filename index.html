@@ -7,6 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="script.js" defer></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en', // your site’s main language
+                    includedLanguages: 'vi,en', // only English + Vietnamese
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
 </head>
 
 <body>
@@ -20,15 +35,10 @@
             <li><a href="#anchor2"> Events</a></li>
             <li><a href="#anchor3"> Execs </a></li>
         </ul>
-        
-        <ul class="lang-vi" style="display:none;">
-            <li><a href="#anchor1">Giới thiệu</a></li>
-            <li><a href="#anchor2">Sự kiện</a></li>
-            <li><a href="#anchor3">Ban điều hành</a></li>
-            <li><a href="#anchor4">Thư viện ảnh</a></li>
-        </ul>
 
-        <button id="langToggle">VI / EN</button>
+          <!-- Google Translate Dropdown -->
+  <div id="google_translate_element"></div>
+
     </nav>
     <!-- homepage -->
     <div class="header">

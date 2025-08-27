@@ -87,6 +87,20 @@ nav .nav_img {
   height: 100px;
 }
 
+#google_translate_element {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.goog-te-gadget {
+  font-family: "Montserrat", sans-serif !important;
+  color: white !important;
+}
+
+.goog-te-combo {
+  border-radius: 6px;
+  padding: 4px;
+}
 
 /*homepage css*/
 
