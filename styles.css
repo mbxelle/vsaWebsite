@@ -213,6 +213,7 @@ h3 {
 }
 
 /*-------------------------------about section css-----------------------------------*/
+
 .about {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -223,8 +224,6 @@ h3 {
 }
 
 .about #anchor1 {
-  /*title just spans the first row
-   grid-area: 1 / 1 / 6 / 7; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,9 +239,9 @@ h3 {
   place-self: center;
 }
 
+/*instagram posts in the background of about section*/
 
 .about .about-instagram {
-  /* grid-area: 2/1/6/7;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,7 +256,6 @@ h3 {
 }
 
 .about .about-instagram:hover {
-/* grid-area: 2/1/6/7;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,6 +274,8 @@ h3 {
   width: 100%;
 }
 
+/*about section message css*/
+
 .about-message {
   grid-area: 4/2/5/5;
   display: flex;
@@ -292,7 +292,7 @@ h3 {
   border-radius: 50px;
   border: 2px solid rgb(27, 82, 29);
   height: auto;
-  /* ensures it only fits content */
+  /* ensures only fits content */
   align-self: start;
   /* stops stretching to grid row height */
 }
