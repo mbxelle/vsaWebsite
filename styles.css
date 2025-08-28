@@ -223,7 +223,8 @@ h3 {
 }
 
 .about #anchor1 {
-  grid-area: 1 / 1 / 6 / 7;
+  /*title just spans the first row
+   grid-area: 1 / 1 / 6 / 7; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,7 +242,7 @@ h3 {
 
 
 .about .about-instagram {
-  grid-area: 2/1/6/7;
+  /* grid-area: 2/1/6/7;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,7 +257,7 @@ h3 {
 }
 
 .about .about-instagram:hover {
-  grid-area: 2/1/6/7;
+/* grid-area: 2/1/6/7;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,7 +269,6 @@ h3 {
   opacity: 1;
   border: 1px solid rgb(20, 63, 22);
 }
-
 
 .instagram-media {
   max-width: 100%;
