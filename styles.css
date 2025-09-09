@@ -215,28 +215,28 @@ h3 {
 /*-------------------------------about section css-----------------------------------*/
 
 .about {
-  display: grid;
+  display: grid; /*divides about section up into 5 by 5*/
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   width: 100%;
-  min-height: 300px;
+  min-height: 300px; /*takes up minimum 300 px*/
   position: relative;
 }
 
 .about #anchor1 {
-  display: flex;
+  grid-column: 1/-1;
+  display:flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 2;
-  scroll-margin-top: 200px;
+  scroll-margin-top: 200px; /*ensures column depends*/
   width: max-content;
   padding: 30px;
   border-radius: 50px;
   background-color: #fbecc9;
   border: 2px solid rgb(27, 82, 29);
   -webkit-text-stroke: 2px rgb(4, 62, 4);
-  place-self: center;
 }
 
 /*instagram posts in the background of about section*/
