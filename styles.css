@@ -141,7 +141,7 @@ nav .nav_img {
   padding: 200px 40px 80px;
   gap: 60px;
   flex-wrap: nowrap;
-  ;
+  min-height: 500px;
   background-color: #fbecc9;
 }
 
