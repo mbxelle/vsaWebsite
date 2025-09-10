@@ -46,5 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
   startAuto();
 });
 
+//mascot following cursor icon 
+const banban = document.getElementById("banban");
 
-// vietnamese lang toggle javascript
+document.addEventListener("mousemove", (e) => {
+  banban.style.left = e.pageX + "px";
+  banban.style.top = e.pageY + "px";
+});
+
