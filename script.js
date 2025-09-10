@@ -54,3 +54,8 @@ document.addEventListener("mousemove", (e) => {
   banban.style.top = e.pageY + "px";
 });
 
+document.addEventListener("mousedown", (e) => {
+  banban.style.left = e.clientX + "px";
+  banban.style.top = e.clientY + "px";
+});
+
