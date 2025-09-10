@@ -221,10 +221,13 @@ h3 {
   width: 100%;
   min-height: 300px; /*takes up minimum 300 px*/
   position: relative;
+    justify-items: center;  
+  align-items: center;    
 }
 
 .about #anchor1 {
   grid-column: 1/-1;
+   grid-row: 2; 
   display:flex;
   justify-content: center;
   align-items: center;
@@ -242,28 +245,22 @@ h3 {
 /*instagram posts in the background of about section*/
 
 .about .about-instagram {
+  position: absolute;
   display: flex;
+    inset: 0; 
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  position: relative;
   z-index: 0;
   margin: 0;
-  overflow: visible;
+  overflow: hidden;
   opacity: .2;
   transition: opacity 0.4s ease;
   border: 1px solid rgb(20, 63, 22);
+  width: 100%;
 }
 
 .about .about-instagram:hover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 0;
-  margin: 0;
-  overflow: visible;
   opacity: 1;
   border: 1px solid rgb(20, 63, 22);
 }
