@@ -379,6 +379,7 @@ h3 {
   overflow: hidden;
   white-space: nowrap;
   height: 20px;
+  padding: 3px;
 }
 
 /* ticker text scroll */
@@ -418,6 +419,7 @@ h3 {
   white-space: nowrap;
   height: 24px;
   margin-top: 16px;
+  padding: 3px;
 }
 
 .news-ticker-bottom .ticker-track {
