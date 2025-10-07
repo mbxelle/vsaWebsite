@@ -45,15 +45,7 @@ It features a clean design with an emphasis on **semantic HTML**, **WCAG accessi
 - updating member cards with photoshoot pictures (expected October 25th)
 📱 Improving **mobile responsiveness** across multiple breakpoints  
 💬 Adding **interactive elements** (event signup forms, gallery carousel)  
-🎨 Refining UI/UX with hover effects and modern transitions  
+🎨 Refining UI/UX with hover effects and modern transitions
 
----
 
-## 💡 Accessibility & Performance (in progress)
-- Designed with **WCAG 2.1 AA compliance** in mind  
-- Uses descriptive alt text, proper heading hierarchy, and semantic structure  
-- Achieved **100% Lighthouse SEO and improving Accessibility** scores  
-- Tested across multiple browsers and screen sizes  
-
----
 
