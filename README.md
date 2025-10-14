@@ -1,7 +1,10 @@
 # Vietnamese Student Association (VSA) Website 
 
-A modern, responsive, and accessible website built for the **Vietnamese Student Association at Toronto Metropolitan University (TMU)**.  
-The site is designed to showcase events, executive members, and community initiatives, while maintaining cultural identity and accessibility across all devices.
+
+https://mbxelle.github.io/vsaWebsite/
+
+
+A modern, responsive, and accessible website built for the **Vietnamese Student Association at Toronto Metropolitan University (TMU)**. The site is designed to showcase events, executive members, and community initiatives, while maintaining cultural identity and accessibility across all devices.
 
 ---
 
