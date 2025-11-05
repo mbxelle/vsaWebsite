@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   startAuto();
 });
 
-//mascot following cursor icon 
+//----------mascot following cursor icon 
 
 (() => {
   const banban = document.getElementById('banban');
@@ -73,3 +73,109 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('touchmove', onPointerMove, { passive: true });
 
 })();
+//--------archive photo slides
+
+// Apps Script Web App URL (Deployment URL)
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxWCPtQGSPRfGSuRnUTyfVSKStna0UG5Zb0Z4pzZD6Pa2d8MbgrZ_aGVcGUwYa8w0JiMQ/exec";
+// Folder to show
+const FOLDER_ID = "1R2OochR-6fj_UPM0KEDcZtccSLwq7aXj";
+
+// DOM hooks
+const gallery = document.getElementById("gallery");
+const countEl = document.getElementById("count");
+const refreshBtn = document.getElementById("refresh");
+
+// Request options
+const ORDER = "newest";   // newest | oldest | name
+const THUMB_SIZE = "w1024"; // change to match your grid column width for sharper thumbs
+
+// Build the feed URL (cache-busted)
+const FEED_URL = () =>
+  `${APPS_SCRIPT_URL}?folder=${encodeURIComponent(FOLDER_ID)}&order=${ORDER}&tsize=${THUMB_SIZE}&t=${Date.now()}`;
+
+/** Load images from Apps Script and render grid */
+async function load() {
+  try {
+    countEl.textContent = "Loading…";
+    gallery.innerHTML = "";
+
+    const res = await fetch(FEED_URL());
+    if (!res.ok) throw new Error(`Feed error: ${res.status}`);
+
+    const data = await res.json();
+    if (data.error) throw new Error(data.message || "Unknown feed error");
+
+    const images = data.images || [];
+    countEl.textContent = `${data.count || images.length} photos`;
+
+    if (!images.length) {
+      gallery.innerHTML = `
+        <div style="grid-column:1/-1;text-align:center;padding:16px;">
+          <p>No images in this folder yet.</p>
+        </div>`;
+      destroyLightbox();
+      return;
+    }
+
+    // Build grid
+    gallery.innerHTML = images.map(img => `
+      <a class="card"
+         href="${img.full}"
+         data-pswp-width="2000"
+         data-pswp-height="1500"
+         target="_blank" rel="noopener">
+        <img src="${img.thumb}" loading="lazy" alt="${escapeHtml(img.name)}"
+             onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAAAAACw='">
+        <span class="caption" title="${escapeHtml(img.name)}">${escapeHtml(img.name)}</span>
+      </a>
+    `).join("");
+
+    initLightbox();
+  } catch (err) {
+    console.error(err);
+    countEl.textContent = "Couldn’t load photos.";
+    gallery.innerHTML = `
+      <div style="grid-column:1/-1;text-align:center;padding:16px;">
+        <p><strong>Heads up:</strong> The gallery feed didn’t load.</p>
+        <ol style="text-align:left;display:inline-block;margin:8px 0;padding-left:18px;">
+          <li>Ensure the Apps Script is deployed as a <em>Web App</em> with access <em>Anyone</em>.</li>
+          <li>Make the Drive folder/images “Anyone with the link: Viewer”.</li>
+          <li>Verify the APPS_SCRIPT_URL and FOLDER_ID constants.</li>
+        </ol>
+        <button id="retry" style="margin-top:8px;padding:8px 12px;">Retry</button>
+      </div>`;
+    document.getElementById("retry")?.addEventListener("click", load);
+    destroyLightbox();
+  }
+}
+
+/** Initialize PhotoSwipe lightbox after DOM is populated */
+function initLightbox() {
+  import("https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js").then(
+    ({ default: PhotoSwipeLightbox }) => {
+      destroyLightbox();
+      window.__pswp = new PhotoSwipeLightbox({
+        gallery: "#gallery",
+        children: "a",
+        pswpModule: () => import("https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js"),
+      });
+      window.__pswp.init();
+    }
+  );
+}
+
+function destroyLightbox() {
+  if (window.__pswp) {
+    try { window.__pswp.destroy(); } catch (_) {}
+    window.__pswp = null;
+  }
+}
+
+/** Escape HTML for safe captions/alt text */
+function escapeHtml(s = "") {
+  return s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+refreshBtn?.addEventListener("click", load);
+load();
+
