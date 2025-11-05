@@ -47,15 +47,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //mascot following cursor icon 
-const banban = document.getElementById("banban");
 
-document.addEventListener("mousemove", (e) => {
-  banban.style.left = e.pageX + "px";
-  banban.style.top = e.pageY + "px";
-});
+(() => {
+  const banban = document.getElementById('banban');
+  if (!banban) return;
 
-document.addEventListener("mousedown", (e) => {
-  banban.style.left = e.clientX + "px";
-  banban.style.top = e.clientY + "px";
-});
+  let x = 0, y = 0, raf = null;
 
+  const paint = () => {
+    banban.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+    raf = null;
+  };
+
+  const onPointerMove = (e) => {
+    // works for mouse & touch/pen
+    const p = e.touches ? e.touches[0] : e;
+    x = p.clientX;
+    y = p.clientY;
+    if (!raf) raf = requestAnimationFrame(paint);
+  };
+
+  // use pointer events if available; fall back to mousemove
+  window.addEventListener('pointermove', onPointerMove, { passive: true });
+  // support touch-only browsers
+  window.addEventListener('touchmove', onPointerMove, { passive: true });
+
+})();
