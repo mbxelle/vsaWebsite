@@ -14,7 +14,12 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" src="banban.png">
-    <link rel="stylesheet" href="styles.css" type="text/css">
+
+<!-- PhotoSwipe lightbox styles (animations, overlay, etc.) -->
+<link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+
+<!-- custom site styles -->
+<link rel="stylesheet" href="styles.css" type="text/css">
     <script src="script.js" defer></script>
     
     <!--google translated contetent for language toggle -->
@@ -255,7 +260,7 @@
 
     </section><!-- /.events-section -->
 
-    <!------------------------------------------------->
+    <!------------------exec member card section------------------------------->
     <section class="execs">
         <h1 id="anchor3">meet the team</h1>
 
@@ -308,6 +313,23 @@
 
 
     </section>
+
+<!------------------archive section------------------------------->
+<section class="photo-archive">
+  <h1>TMVSA Photo Archive</h1>
+  <div class="toolbar">
+    <button id="refresh">Refresh</button>
+    <span id="count"></span>
+  </div>
+  <div id="gallery" class="grid" data-pswp></div>
+</section>
+
+  <!-- Lightbox JS -->
+  <script type="module" src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js"></script>
+  <script type="module" src="script.js"></script>
+
+
+
     <footer>
         <p> © Vietnamese Student Association @ Toronto Metropolitan University</p>
         <div class="footer-social" aria-label="Social media">
