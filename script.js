@@ -126,7 +126,6 @@ async function load() {
          target="_blank" rel="noopener">
         <img src="${img.thumb}" loading="lazy" alt="${escapeHtml(img.name)}"
              onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAAAAACw='">
-        <span class="caption" title="${escapeHtml(img.name)}">${escapeHtml(img.name)}</span>
       </a>
     `).join("");
 

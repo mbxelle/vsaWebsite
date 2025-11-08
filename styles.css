@@ -812,94 +812,98 @@ h3 {
 /* ---------PHOTO ARCHIVE SECTION ------- */
 .photo-archive {
   padding: 40px;
-  background-color: #fafafa;
+  background-color: #fff8e6;
   color: #111;
   font-family: "Montserrat", sans-serif;
 }
 
+/* Title */
 .photo-archive h1 {
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 20px;
-  color: #c62828; 
+  color: #c62828;
 }
 
+/* Top bar */
 .photo-archive .toolbar {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
 }
 
 .photo-archive .toolbar button {
   border: 1px solid #ddd;
   background: #fff;
   border-radius: 8px;
-  padding: 6px 10px;
+  padding: 8px 12px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s ease;
 }
 
 .photo-archive .toolbar button:hover {
   background: orange;
+  color: #111;
 }
 
+/* Constrain archive height & enable internal scrolling */
+.photo-archive .archive-scroll {
+  max-height: min(70vh, 720px); /* adjusts to viewport, caps at 720px */
+  overflow: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+}
+
+/* Grid */
 .photo-archive .grid {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  padding: 4px; /* small padding so scroll bar doesn’t overlap edges */
 }
 
-/* Individual photo card */
+/* Cards */
 .photo-archive .card {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .photo-archive .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
+/* Images (combined rule, including fade-in) */
 .photo-archive .card img {
   display: block;
   width: 100%;
-  height: 160px;
+  height: 200px;            /* adjust to taste: 180–240px looks good */
   object-fit: cover;
-}
-
-/* Caption under each image */
-.photo-archive .caption {
-  position: absolute;
-  left: 8px;
-  bottom: 8px;
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-size: 12px;
-  max-width: 90%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: 500;
-}
-
-/*subtle fade-in animation for when photos load */
-.photo-archive .card img {
+  border-radius: 12px;
   opacity: 0;
   animation: fadeIn 0.6s ease forwards;
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
+  to   { opacity: 1; transform: scale(1); }
 }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .photo-archive { padding: 24px; }
+  .photo-archive .grid { gap: 10px; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .photo-archive .card img { height: 170px; }
+}
+
 /*---------------------------------------Footer Css----------------------------*/
 
 footer {

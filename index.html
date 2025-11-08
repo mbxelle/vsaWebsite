@@ -63,6 +63,7 @@
             <li><a href="#anchor1"> About Us </a></li>
             <li><a href="#anchor2"> Events</a></li>
             <li><a href="#anchor3"> Execs </a></li>
+            <li><a href="#anchor4"> Archive </a></li>
             <li> <!-- Google Translate Dropdown -->
                 <div class="lang-buttons" role="group" aria-label="Language selection">
                     <button onclick="translatePage('en')" class="lang-btn">🇨🇦</button>
@@ -315,14 +316,20 @@
     </section>
 
 <!------------------archive section------------------------------->
-<section class="photo-archive">
-  <h1>TMVSA Photo Archive</h1>
+<section id="anchor4" class="photo-archive" aria-labelledby="tmvsa-archive-title">
+  <h1 id="tmvsa-archive-title">TMVSA Photo Archive</h1>
+
   <div class="toolbar">
-    <button id="refresh">Refresh</button>
-    <span id="count"></span>
+    <button id="refresh" type="button">Refresh</button>
+    <span id="count" aria-live="polite"></span>
   </div>
-  <div id="gallery" class="grid" data-pswp></div>
+
+  <!-- Scrolls internally so the page doesn’t grow too tall -->
+  <div class="archive-scroll">
+    <div id="gallery" class="grid" data-pswp></div>
+  </div>
 </section>
+
 
   <!-- Lightbox JS -->
   <script type="module" src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js"></script>
