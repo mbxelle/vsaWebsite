@@ -37,7 +37,7 @@ It features a clean design with an emphasis on **semantic HTML**, **WCAG accessi
 ✅ 100% **Lighthouse SEO score** and excellent performance metrics  
 ✅ WCAG-compliant colors, alt-text, and ARIA attributes  
 ✅ Reusable and organized CSS classes for layout consistency  
-✅ Organized sectioning (`About Us`, `Execs`, `Events`, `Footer`)
+✅ Organized sectioning (`About Us`, `Execs`, `Events`,`Archive`, `Footer`)
 
 ---
 
