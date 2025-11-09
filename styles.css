@@ -165,7 +165,7 @@ nav .nav_img {
   border-radius: 90%;
 }
 
-#image {
+#image {  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,7 +226,7 @@ h3 {
 }
 
 .button:hover {
-  background-image: url('chrome.jpg');
+  background-color: #103011;
   cursor: pointer;
 }
 
@@ -238,7 +238,7 @@ h3 {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   width: 100%;
-  min-height: 300px;
+  min-height: 500px;
   /*takes up minimum 300 px*/
   position: relative;
   justify-items: center;
@@ -290,7 +290,7 @@ h3 {
 
 .instagram-media {
   max-width: 100%;
-  min-width: auto;
+  min-height: auto;
   width: 100%;
 }
 
@@ -383,9 +383,9 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background: rgb(189, 97, 0);
-  border-top: 3px solid rgb(27, 82, 29);
-  border-bottom: 3px solid rgb(27, 82, 29);
+  background: rgb(38, 71, 39);
+  border-top: 3px solid  #000000;
+  border-bottom: 3px solid #000000;
   overflow: hidden;
   white-space: nowrap;
   height: 20px;
@@ -398,12 +398,13 @@ h3 {
   animation: scroll 30s linear infinite;
 }
 
+/*change news ticke*/
 .ticker-track span {
   display: inline-block;
   padding: 0 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: rgb(255, 240, 152);
+  color: rgb(255, 255, 255);
 }
 
 @keyframes scroll {
@@ -422,9 +423,9 @@ h3 {
   /* span both columns of .events-section */
   width: 100%;
   /* container width */
-  background: rgb(189, 97, 0);
-  border-top: 3px solid rgb(27, 82, 29);
-  border-bottom: 3px solid rgb(27, 82, 29);
+  background: rgb(38, 71, 39);
+  border-top: 3px solid  #000000;
+  border-bottom: 3px solid #000000;
   overflow: hidden;
   white-space: nowrap;
   height: 24px;
@@ -445,11 +446,10 @@ h3 {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+  color: var(--red);
   margin: 8px 0;
   line-height: 1.1;
-  color: rgb(189, 97, 0);
-  -webkit-text-stroke: 3px rgb(189, 97, 0);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 3.75rem;
   letter-spacing: 1px;
   scroll-margin-top: 140px;
@@ -476,12 +476,12 @@ h3 {
 
 #upcoming-title {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--red);
   font-weight: 600;
   font-size: 1.75rem;
   letter-spacing: .7px;
@@ -491,42 +491,43 @@ h3 {
 
 .event-widget {
   display: grid;
-  grid-template-columns: 1fr 100px;
+  grid-template-columns: 2fr 1fr;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 500px;
+  height: 120px;
+  width: 560px;
   border-radius: 12px;
-  background-color: #fbd98a;
-  border: 2px solid white;
+  background-color: #e0d3b7;
+  border: 2px solid white;  
   padding: 12px;
   gap: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   position: relative;
-  margin-left: 30px;
+  margin-left: 110px;
 }
 
 /* Left side = title top + time bottom */
 .event-left {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center ;
   align-items: flex-start;
-  padding-left: 10px;
+  padding-left: 15px;
+  width:400px;
 }
 
 /* Right side = centered square date box */
 .event-right {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: white;
   height: 70px;
   width: 80px;
   border-radius: 8px;
-  padding: 12px;
+  padding: 18px;
 }
 
 .event-month {
@@ -534,7 +535,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: rgb(20, 63, 22);
-  font-weight: 400;
+  font-weight: 700;
   font-size: 15px;
   letter-spacing: .3px;
   line-height: 90%;
@@ -548,7 +549,7 @@ h3 {
   text-transform: uppercase;
   color: rgb(20, 63, 22);
   font-weight: 800;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: .3px;
   line-height: 90%;
 }
@@ -558,7 +559,7 @@ h3 {
   text-align: left;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--red);
   -webkit-text-stroke: .7px var(--orange);
   font-weight: 900;
   font-size: 20px;
@@ -577,7 +578,7 @@ h3 {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: .4px;
-  line-height: 90%;
+  line-height: 1.4;
   margin-bottom: 8px;
 }
 
@@ -585,7 +586,7 @@ h3 {
   text-align: left;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: rgb(165, 109, 4);
+  color: var(--red);
   font-weight: 700;
   font-size: 15px;
   letter-spacing: .3px;
@@ -611,26 +612,26 @@ h3 {
   max-width: 150px;
   margin: 10px auto 0;
   padding: 8px 10px;
-  background-color: rgb(189, 97, 0);
-  /* same as ticker orange */
-  color: white;
+  color: var(--red);
+  color: rgb(12, 7, 7);
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  font-weight: 550;
+  font-weight: 900;
   text-transform: uppercase;
+  border: .5px solid var(--green);
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 3;
 }
 
 
 .event-btn:hover {
-  background-color: rgb(42, 107, 44);
-  transform: scale(1.05);
-  color: #fbd98a;
+  background-color: var(--green);
+  transform: scale(1.05); 
+  color:white;
 }
 
 .blur {
@@ -657,7 +658,7 @@ h3 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--red);
   font-weight: 600;
   font-size: 1.75rem;
   letter-spacing: .7px;
@@ -673,7 +674,7 @@ h3 {
   padding: 20px;
   border: 2px solid white;
   border-radius: 16px;
-  background-color: #fbd98a;
+  background-color:  #e0d3b7;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
@@ -692,7 +693,7 @@ h3 {
   justify-content: space-between;
   gap: 10px;
   background: #fff8e6;
-  border: 2px solid orange;
+  border: 2px solid var(--red);
   border-radius: 20px;
   padding: 12px 16px;
   max-width: 550px;
@@ -708,13 +709,14 @@ h3 {
   text-align: center;
   font-size: 0.95rem;
   color: #143f16;
-  line-height: 1.4;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 .bubble-question {
-  font-weight: 700;
-  color: #bd6100;
-  font-size: 1rem;
+  font-weight: 900;
+  color: var(--red);
+  font-size: 1.4rem;
 }
 
 .bubble-prev,
@@ -733,7 +735,7 @@ h3 {
 
 .bubble-prev:hover,
 .bubble-next:hover {
-  background: #bd6100;
+  background: #5f2b2b;
 }
 
 
@@ -744,7 +746,7 @@ h3 {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 24px;
   padding: 40px 20px;
-  background-image: url('water.png');
+  background-color: #3f0602;
   position: relative;
 }
 
@@ -762,19 +764,22 @@ h3 {
 }
 
 #anchor3 {
+  grid-column: 1 / -1; 
+  margin-top: 60px;    
+  margin-bottom: 60px;  
+  font-size: 4rem;       
+  text-align: center;
   scroll-margin-top: 100px;
-  color: rgb(255, 240, 152);
+  color: var(--cream);
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  margin: 30px 40px;
+  margin: 50px 40px;
   line-height: 1.1;
-  -webkit-text-stroke: 3px rgb(255, 240, 152);
   font-weight: 600;
-  font-size: 3.75rem;
-  letter-spacing: 1px;
+  letter-spacing: 1.4px;
 
 }
 
@@ -786,9 +791,9 @@ h3 {
   text-align: center;
   /* center text too */
   padding: 20px;
-  border: 2px solid rgb(255, 240, 152);
+  border: 2px solid black;
   border-radius: 16px;
-  background-color: #122f13;
+  background-color: #3f0602;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -797,7 +802,7 @@ h3 {
   display: block;
   object-fit: cover;
   object-position: center;
-  border: 2px solid rgb(255, 240, 152);
+  border: 2px solid  black;
   border-radius: 2%;
   margin-bottom: 12px;
 }
@@ -813,18 +818,27 @@ h3 {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 6px;
-  color: rgb(255, 240, 152);
-  -webkit-text-stroke: 0.75px rgb(189, 97, 0);
+  color: var(--cream);
+  -webkit-text-stroke: 0.75px var(--cream);
 }
 
 .member-card p {
   font-size: 0.95rem;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  color: rgb(186, 185, 123);
+  color: #8e897f;
 }
 
 /* ---------PHOTO ARCHIVE SECTION ------- */
+
+#tmvsa-archive-title{
+  grid-column: 1 / -1; 
+  margin-top: 30px;    
+  margin-bottom: 50px;  
+  font-size: 4rem;       
+  text-align: center;
+  
+}
 .photo-archive {
   padding: 40px;
   background-color: #fff8e6;
@@ -832,29 +846,6 @@ h3 {
   font-family: "Montserrat", sans-serif;
 }
 
-
-/* Top bar */
-.photo-archive .toolbar {
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-.photo-archive .toolbar button {
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 8px;
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.photo-archive .toolbar button:hover {
-  background: orange;
-  color: #111;
-}
 
 /* Constrain archive height & enable internal scrolling */
 .photo-archive .archive-scroll {
@@ -894,8 +885,7 @@ h3 {
 .photo-archive .card img {
   display: block;
   width: 100%;
-  height: 200px;
-  /* adjust to taste: 180–240px looks good */
+  height: 240px;
   object-fit: cover;
   border-radius: 12px;
   opacity: 0;
