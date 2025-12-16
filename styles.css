@@ -6,8 +6,9 @@
   --red: #8b0e05;
   --orange: rgb(189, 97, 0);
   --cream: #e6dece;
-  --green: rgb(27, 82, 29);
+  --grey: rgb(82, 87, 83);
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -133,7 +134,7 @@ nav .nav_img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid var(--green);
+  border: 2px solid var(--grey);
   background: #fff8e6;
   cursor: pointer;
   font-size: 18px;
@@ -192,7 +193,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 30px 0;
-  color: var(--green);
+  color: var(--grey);
 }
 
 h3 {
@@ -221,12 +222,12 @@ h3 {
   padding: 20px 36px;
   border-radius: 12px;
   transition: all 0.4s ease;
-  border: 2px solid rgb(27, 82, 29);
+  border: 2px solid var(--grey);
 
 }
 
 .button:hover {
-  background-color: #103011;
+  background-color: var(-grey);
   cursor: pointer;
 }
 
@@ -262,7 +263,7 @@ h3 {
   padding: 30px 70px;
   border-radius: 50px;
   background-color: var(--cream);
-  border: 2px solid rgb(27, 82, 29);
+  border: 2px solid var(--grey);
 }
 
 /*instagram posts in the background of about section*/
@@ -279,13 +280,13 @@ h3 {
   overflow: hidden;
   opacity: .2;
   transition: opacity 0.4s ease;
-  border: 1px solid var(--green);
+  border: 1px solid var(--grey);
   width: 100%;
 }
 
 .about .about-instagram:hover {
   opacity: 1;
-  border: 1px solid var(--green);
+  border: 1px solid var(--grey);
 }
 
 .instagram-media {
@@ -310,7 +311,7 @@ h3 {
   padding: 30px;
   background-color: var(--cream);
   border-radius: 50px;
-  border: 2px solid var(--green);
+  border: 2px solid var(--grey);
   height: auto;
   /* ensures only fits content */
   align-self: start;
@@ -320,7 +321,7 @@ h3 {
 .about-message {
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  color: var(--green);
+  color: var(--grey);
   letter-spacing: 1.5px;
   line-height: 20px;
 }
@@ -339,7 +340,7 @@ h3 {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--green);
+  border: 2px solid var(--grey);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   z-index: 3;
@@ -383,11 +384,11 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background: rgb(38, 71, 39);
+  background: var(--grey);
   border-top: 3px solid  #000000;
   border-bottom: 3px solid #000000;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: nowrap;  
   height: 20px;
   padding: 3px;
 }
@@ -423,7 +424,7 @@ h3 {
   /* span both columns of .events-section */
   width: 100%;
   /* container width */
-  background: rgb(38, 71, 39);
+  background: var(--grey);
   border-top: 3px solid  #000000;
   border-bottom: 3px solid #000000;
   overflow: hidden;
@@ -534,7 +535,7 @@ h3 {
   display: block;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: rgb(20, 63, 22);
+  color: var(--grey);
   font-weight: 700;
   font-size: 15px;
   letter-spacing: .3px;
@@ -547,7 +548,7 @@ h3 {
   padding: 7px;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: rgb(20, 63, 22);
+  color: var(--grey);
   font-weight: 800;
   font-size: 20px;
   letter-spacing: .3px;
@@ -574,7 +575,7 @@ h3 {
   display: block;
   text-align: left;
   font-family: "Montserrat", sans-serif;
-  color: rgb(20, 63, 22);
+  color: var(--grey);
   font-weight: 400;
   font-size: 14px;
   letter-spacing: .4px;
@@ -618,7 +619,7 @@ h3 {
   font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
-  border: .5px solid var(--green);
+  border: .5px solid var(--grey);
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.2s ease;
@@ -629,7 +630,7 @@ h3 {
 
 
 .event-btn:hover {
-  background-color: var(--green);
+  background-color: var(--grey);
   transform: scale(1.05); 
   color:white;
 }
@@ -956,7 +957,7 @@ footer p {
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgb(27, 82, 29);
+  border: 2px solid var(--grey);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   z-index: 3;
