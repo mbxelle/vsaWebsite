@@ -1,18 +1,54 @@
-# React + Vite
+# How to Run the VSA React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was built using **React** and **Vite**. Follow the steps below to set up the development environment and run the application on your local machine.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ensure you have **Node.js** (version 18 or higher) and **npm** installed. You can check by running:
 
-## React Compiler
+```bash
+node -v
+npm -v
+```
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Setup Instructions
 
-Note: This will impact Vite dev & build performances.
+1.  **Navigate to the project directory:**
+    Open your terminal and enter the `vsa-react` folder where the React code lives:
+    ```bash
+    cd vsa-react
+    ```
 
-## Expanding the ESLint configuration
+2.  **Install dependencies:**
+    Run the following command to download the necessary packages:
+    ```bash
+    npm install
+    ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running the Application
+
+### Development Mode
+To start the local development server with Hot Module Replacement (HMR):
+```bash
+npm run dev
+```
+After running this, the terminal will provide a local URL (usually `http://localhost:5173`). Open this in your browser to view the site.
+
+### Building for Production
+To generate a production-ready build in the `dist/` folder:
+```bash
+npm run build
+```
+
+### Previewing the Production Build
+To test the production build locally before deploying:
+```bash
+npm run preview
+```
+
+## Project Structure Notes
+- **`src/`**: Contains all React components, hooks, and styles.
+- **`public/`**: Stores static assets like images (`vsaTeam.png`, social icons, etc.).
+- **`src/styles/components/`**: Individual CSS files for each section.
+
+
