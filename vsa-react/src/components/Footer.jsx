@@ -1,7 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer>
-      <p>© Vietnamese Student Association @ Toronto Metropolitan University</p>
+      <p>{t("footer.copyright")}</p>
       <div className="footer-social" aria-label="Social media">
         <a href="https://www.instagram.com/torontometvsa/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <img src="/instagram.png" alt="Instagram logo" />

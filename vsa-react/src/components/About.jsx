@@ -1,16 +1,14 @@
+import { useTranslation } from "react-i18next";
 import { useInstagramEmbed } from "../hooks/useInstagramEmbed.js";
 
 function AboutSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="about" aria-labelledby="anchor1">
-      <h1 id="anchor1">about us</h1>
+      <h1 id="anchor1">{t("about.title")}</h1>
       <div className="about-message">
-        <p>
-          We’re a student-led community dedicated to celebrating and sharing
-          Vietnamese culture through events, food, language, and friendships.
-          Whether you’re Vietnamese or just curious, everyone is welcome to
-          learn, connect, and have fun with us! Stay tuned for our events!
-        </p>
+        <p>{t("about.description")}</p>
       </div>
       <div className="social-icons">
         <a

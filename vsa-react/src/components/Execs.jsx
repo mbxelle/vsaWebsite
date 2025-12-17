@@ -1,21 +1,4 @@
-const execsData = [
-  {
-    name: "Teresa",
-    role: "President",
-    imgSrc: "/execs/teresa.png", // Assuming images are in public/execs/
-  },
-  {
-    name: "Chau Nguyen",
-    role: "Vice President",
-    imgSrc: "/execs/chau.png",
-  },
-  {
-    name: "Britney",
-    role: "Graphic Designer",
-    imgSrc: "/execs/britney.png",
-  },
-  // Add other exec members here
-];
+import { useTranslation } from "react-i18next";
 
 function MemberCard({ name, role, imgSrc }) {
   return (
@@ -28,9 +11,29 @@ function MemberCard({ name, role, imgSrc }) {
 }
 
 export default function Execs() {
+  const { t } = useTranslation();
+
+  const execsData = [
+    {
+      name: "Teresa",
+      role: t("execs.roles.president"),
+      imgSrc: "/execs/teresa.png",
+    },
+    {
+      name: "Chau Nguyen",
+      role: t("execs.roles.vp"),
+      imgSrc: "/execs/chau.png",
+    },
+    {
+      name: "Britney",
+      role: t("execs.roles.designer"),
+      imgSrc: "/execs/britney.png",
+    },
+  ];
+
   return (
     <section className="execs">
-      <h1 id="anchor3">MEET THE TEAM</h1>
+      <h1 id="anchor3">{t("execs.title")}</h1>
       {execsData.map((exec) => (
         <MemberCard
           key={exec.name}

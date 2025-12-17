@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 export default function EventCard({
   name,
   desc,
@@ -6,6 +8,8 @@ export default function EventCard({
   day,
   ticketsUrl,
 }) {
+  const { t } = useTranslation();
+
   return (
     <div className="event-widget">
       <div className="event-left">
@@ -19,7 +23,7 @@ export default function EventCard({
                 rel="noopener noreferrer"
                 className="event-btn"
               >
-                Get Tickets
+                {t("events.get_tickets")}
               </a>
             )}
           </div>

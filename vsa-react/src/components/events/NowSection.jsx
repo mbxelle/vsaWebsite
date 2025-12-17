@@ -1,25 +1,18 @@
 import { useEffect, useRef, useState } from "react";
-
-const SLIDES = [
-  { q: "Where is the event?", a: "Tecumseh Auditorium, Sept 12, 6–9pm!" },
-  {
-    q: "What can I expect?",
-    a: "Travel through 3 regions of Vietnam with each region having fun games & activities where you can win stamps for your chance to a raffle entry!",
-  },
-  {
-    q: "How do I enter the raffle?",
-    a: "Complete 3 region activities, collect stamps in your passport = raffle entry.",
-  },
-  {
-    q: "Prizes?",
-    a: "LEGO set, matcha kit, skincare bundle, disposable camera, snacks, coffee card.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function NowSection() {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
   const bubbleRef = useRef(null);
+
+  const SLIDES = [
+    { q: t("events.questions.where"), a: t("events.questions.where_ans") },
+    { q: t("events.questions.expect"), a: t("events.questions.expect_ans") },
+    { q: t("events.questions.raffle"), a: t("events.questions.raffle_ans") },
+    { q: t("events.questions.prizes"), a: t("events.questions.prizes_ans") },
+  ];
 
   const next = () => setIndex((i) => (i + 1) % SLIDES.length);
   const prev = () => setIndex((i) => (i - 1 + SLIDES.length) % SLIDES.length);
@@ -64,7 +57,7 @@ export default function NowSection() {
 
   return (
     <section className="now-section">
-      <h2 id="now-title">Happening now</h2>
+      <h2 id="now-title">{t("events.happening_now")}</h2>
       {/* link to get tickets for happening now event */}
       <a
         href="https://eventbrite.com/your-happening-now-link"
@@ -72,7 +65,7 @@ export default function NowSection() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Get Tickets Now!
+        {t("events.get_tickets_now")}
       </a>
       <img src="/event-poster.png" alt="event-poster" />
       <div className="info-bubble" ref={bubbleRef}>

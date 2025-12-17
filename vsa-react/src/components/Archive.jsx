@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbxWCPtQGSPRfGSuRnUTyfVSKStna0UG5Zb0Z4pzZD6Pa2d8MbgrZ_aGVcGUwYa8w0JiMQ/exec";
@@ -20,6 +21,7 @@ function escapeHtml(s = "") {
 }
 
 function Archive() {
+  const { t } = useTranslation();
   const [items, setItems] = useState(null); // null = loading, [] = loaded no items
   const [error, setError] = useState(null);
   const [reloadKey, setReloadKey] = useState(0); // trigger refetch
@@ -49,7 +51,7 @@ function Archive() {
 
   return (
     <section id="anchor4" className="photo-archive">
-      <h1 id="tmvsa-archive-title">ARCHIVE</h1>
+      <h1 id="tmvsa-archive-title">{t("archive.title")}</h1>
       <div className="archive-scroll">
         {/* loading state */}
         {items === null && !error && (
@@ -60,7 +62,7 @@ function Archive() {
               padding: "16px",
             }}
           >
-            <p>Loading gallery…</p>
+            <p>{t("archive.loading")}</p>
           </div>
         )}
 
@@ -74,7 +76,7 @@ function Archive() {
             }}
           >
             <p>
-              <strong>Heads up:</strong> The gallery feed didn’t load.
+              <strong>{t("archive.error_head")}</strong>
             </p>
             <ol
               style={{
@@ -84,22 +86,16 @@ function Archive() {
                 paddingLeft: "18px",
               }}
             >
-              <li>
-                Ensure the Apps Script is deployed as a{" "}
-                <em>Web App</em> with access <em>Anyone</em>.
-              </li>
-              <li>
-                Make the Drive folder/images “Anyone with the link:
-                Viewer”.
-              </li>
-              <li>Verify the APPS_SCRIPT_URL and FOLDER_ID constants.</li>
+              <li>{t("archive.error_step1")}</li>
+              <li>{t("archive.error_step2")}</li>
+              <li>{t("archive.error_step3")}</li>
             </ol>
             <button
               type="button"
               onClick={() => setReloadKey((k) => k + 1)}
               style={{ marginTop: "8px", padding: "8px 12px" }}
             >
-              Retry
+              {t("archive.retry")}
             </button>
           </div>
         )}

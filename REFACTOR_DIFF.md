@@ -26,13 +26,14 @@ This document summarizes **what changed** when refactoring the original static s
 
 **React**
 - **Component**: `vsa-react/src/components/NavBar.jsx`
-- **Hook**: `vsa-react/src/hooks/useGoogleTranslate.js`
-- **Injected DOM**: hidden translate container is rendered by `vsa-react/src/App.jsx`
+- **i18n**: Integrated `react-i18next` for natural, manual translations.
+- **Config**: `vsa-react/src/i18n/i18n.js` with `en.json` and `vi.json` locales.
 - **CSS**: `vsa-react/src/styles/components/Navbar.css`
 
 **Notable changes**
-- Google Translate script loading moved from inline `<script>` to `useGoogleTranslate()` (runtime injection).
-- Language buttons call `translatePage("en" | "vi")` from React.
+- Switched from Google machine translation to high-quality manual translations via `react-i18next`.
+- Language toggle buttons now call `i18n.changeLanguage()`.
+- Removed obsolete `useGoogleTranslate.js` hook.
 - Logo source updated to `/tmvsa_logo2.png` (served from `vsa-react/public/`).
 
 ---
@@ -143,9 +144,9 @@ This document summarizes **what changed** when refactoring the original static s
 
 ## JavaScript behavior migration summary
 
-- **Google Translate**
-  - Original: inline `googleTranslateElementInit()` + script tag in `index.html`
-  - React: `useGoogleTranslate()` injects the script; `translatePage()` retained.
+- **Internationalization (i18n)**
+  - Original: Google Translate machine translation.
+  - React: `react-i18next` with high-quality manual translations in `en.json` and `vi.json`.
 
 - **Mascot follower**
   - Original: `script.js` uses pointer events + `requestAnimationFrame` and updates `#banban` transform.

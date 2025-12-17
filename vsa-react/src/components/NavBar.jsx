@@ -1,6 +1,12 @@
-import { translatePage } from "../hooks/useGoogleTranslate.js";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <nav id="navbar" aria-label="Primary">
       <div className="nav_img">
@@ -8,16 +14,16 @@ export default function Navbar() {
       </div>
       <ul>
         <li>
-          <a href="#anchor1"> About Us </a>
+          <a href="#anchor1"> {t("nav.about")} </a>
         </li>
         <li>
-          <a href="#anchor2"> Events</a>
+          <a href="#anchor2"> {t("nav.events")}</a>
         </li>
         <li>
-          <a href="#anchor3"> Execs </a>
+          <a href="#anchor3"> {t("nav.execs")} </a>
         </li>
         <li>
-          <a href="#anchor4"> Archive </a>
+          <a href="#anchor4"> {t("nav.archive")} </a>
         </li>
         <li>
           <div
@@ -26,14 +32,14 @@ export default function Navbar() {
             aria-label="Language selection"
           >
             <button
-              onClick={() => translatePage("en")}
+              onClick={() => changeLanguage("en")}
               className="lang-btn"
               type="button"
             >
               🇨🇦
             </button>
             <button
-              onClick={() => translatePage("vi")}
+              onClick={() => changeLanguage("vi")}
               className="lang-btn"
               type="button"
             >

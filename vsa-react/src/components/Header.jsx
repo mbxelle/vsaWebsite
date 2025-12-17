@@ -1,11 +1,15 @@
+import { useTranslation } from "react-i18next";
+
 export default function Header() {
+  const { t } = useTranslation();
+
   return (
     <section className="header">
       <div id="intro">
-        <h1>Vietnamese Student Association</h1>
-        <h2>Toronto Metropolitan University</h2>
+        <h1>{t("header.title")}</h1>
+        <h2>{t("header.subtitle")}</h2>
         <div className="button">
-          <a href="#anchor1">About Us</a>
+          <a href="#anchor1">{t("header.button")}</a>
         </div>
       </div>
       <div id="image">
