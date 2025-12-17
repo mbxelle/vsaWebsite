@@ -1,0 +1,67 @@
+/* archive */
+#tmvsa-archive-title {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.photo-archive {
+    padding: 40px;
+    background-color: #fff8e6;
+    color: #111;
+    font-family: "Montserrat", sans-serif;
+}
+
+.photo-archive .archive-scroll {
+    max-height: min(70vh, 720px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+}
+
+.photo-archive .grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    padding: 4px;
+}
+
+.photo-archive .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.photo-archive .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.photo-archive .card img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
