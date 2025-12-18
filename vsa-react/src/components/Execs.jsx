@@ -15,9 +15,9 @@ export default function Execs() {
 
   const execsData = [
     {
-      name: "Teresa",
+      name: "Teresa Tran",
       role: t("execs.roles.president"),
-      imgSrc: "/execs/teresa.png",
+      imgSrc: "/execs/TERESA.JPG",
     },
     {
       name: "Chau Nguyen",
@@ -27,7 +27,13 @@ export default function Execs() {
     {
       name: "Britney",
       role: t("execs.roles.designer"),
-      imgSrc: "/execs/britney.png",
+      imgSrc: "/execs/BRITNEY.JPG",
+    },
+    
+    {
+      name: "Jessica",
+      role: t("execs.roles.Vp"),
+      imgSrc: "/execs/JESSICA.JPG",
     },
   ];
 
