@@ -39,16 +39,17 @@
       "president": "President",
       "vp": "Vice President",
       "coVpEvents": "Co-VP of Events",
-      "finance": "Director of Finance",
+      "df": "Director of Finance",
       "cr":"Corporate Relations",
       "ca": "Events/Cultural Advisor",
       "vpm": "VP of Marketing",
       "designer": "Graphic Designer",
       "ccl": "Cultural Content Lead",
       "ve": "Video Editor",
-      "WD":"Web Developer",
+      "wd":"Web Developer",
       "Mascot": "Mascot"
     }
+  
   },
   "archive": {
     "title": "ARCHIVE",

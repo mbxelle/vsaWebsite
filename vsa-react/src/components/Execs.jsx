@@ -22,18 +22,63 @@ export default function Execs() {
     {
       name: "Chau Nguyen",
       role: t("execs.roles.vp"),
-      imgSrc: "/execs/chau.png",
+      imgSrc: "/execs/CHAU.jpg",
     },
     {
-      name: "Britney",
-      role: t("execs.roles.designer"),
+      name: "Sodana Ung",
+      role: t("execs.roles.df"),
+      imgSrc: "/execs/SODANA.jpeg",
+    },
+    {
+      name: "Ninh Dang",
+      role: t("execs.roles.cr"),
+      imgSrc: "/execs/NINH.jpg",
+    },
+    {
+      name: "Trang Pham",
+      role: t("execs.roles.ca"),
+      imgSrc: "/execs/TRANG.jpg",
+    },
+
+    {
+      name: "Jessica Hang",
+      role: t("execs.roles.coVpEvents"),
+      imgSrc: "/execs/JESSICA.jpg",
+    },
+    {
+      name: "Stephen Nguyen",
+      role: t("execs.roles.coVpEvents"),
+      imgSrc: "/execs/STEPHEN.jpg",
+    },
+        {
+      name: "Britney Phung",
+      role: t("execs.roles.vpm"),
       imgSrc: "/execs/BRITNEY.JPG",
     },
-    
-    {
-      name: "Jessica",
-      role: t("execs.roles.Vp"),
-      imgSrc: "/execs/JESSICA.JPG",
+        {
+      name: "Alex Kieu",
+      role: t("execs.roles.designer"),
+      imgSrc: "/execs/ALEX.jpg",
+    },
+        {
+      name: "Bao Le",
+      role: t("execs.roles.ccl"),
+      imgSrc: "/execs/BAO.JPG",
+    },
+        {
+      name: "Ivy Vu",
+      role: t("execs.roles.ve"),
+      imgSrc: "/execs/IVY.jpg",
+    },
+        {
+      name: "Michelle Bui",
+      role: t("execs.roles.wd"),
+      imgSrc: "/execs/MICHELLE.JPG",
+    },
+            {
+      name: "Presly Trinh",
+      role: t("execs.roles.Mascot"),
+      imgSrc: "/execs/PRESLEY.jpg",
     },
   ];
 
