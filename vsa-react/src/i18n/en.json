@@ -38,8 +38,18 @@
     "roles": {
       "president": "President",
       "vp": "Vice President",
-      "designer": "Graphic Designer"
+      "coVpEvents": "Co-VP of Events",
+      "df": "Director of Finance",
+      "cr":"Corporate Relations",
+      "ca": "Events/Cultural Advisor",
+      "vpm": "VP of Marketing",
+      "designer": "Graphic Designer",
+      "ccl": "Cultural Content Lead",
+      "ve": "Video Editor",
+      "wd":"Web Developer",
+      "cc": "Content Creator"
     }
+  
   },
   "archive": {
     "title": "ARCHIVE",
