@@ -17,7 +17,7 @@ function AboutSection() {
           rel="noopener noreferrer"
           aria-label="Instagram"
         >
-          <img src="/instagram.png" alt="Instagram logo" />
+          <img src="/grey_insta.png" alt="Instagram logo" />
         </a>
         <a
           href="https://www.facebook.com/TorontoMetVSA/"
@@ -25,7 +25,7 @@ function AboutSection() {
           rel="noopener noreferrer"
           aria-label="Facebook"
         >
-          <img src="/facebook.png" alt="Facebook logo" />
+          <img src="/grey_facebook.png" alt="Facebook logo" />
         </a>
         <a
           href="https://www.tiktok.com/@tmuvsa"
@@ -33,7 +33,7 @@ function AboutSection() {
           rel="noopener noreferrer"
           aria-label="TikTok"
         >
-          <img src="/tiktok.png" alt="TikTok logo" />
+          <img src="/grey_tiktok.png" alt="TikTok logo" />
         </a>
         <a
           href="https://ca.linkedin.com/company/torontometvsa"
@@ -41,7 +41,7 @@ function AboutSection() {
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <img src="/linkedin.png" alt="LinkedIn logo" />
+          <img src="/grey_linkedin.png" alt="LinkedIn logo" />
         </a>
       </div>
       <div className="about-instagram" aria-label="Instagram feed">
