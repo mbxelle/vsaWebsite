@@ -93,11 +93,13 @@
   margin-bottom: 70px;
 }
 
-.exec-heading-image {
-  width: min(520px, 90%);
-  height: auto;
-  margin: 30px 0 26px;
+.edwardian {
+  font-size: 2.5rem;  
+  color: var(--grey);
+  font-weight: 400;
+  letter-spacing: 4px;
 }
+
 
 .exec-grid {
   display: grid;

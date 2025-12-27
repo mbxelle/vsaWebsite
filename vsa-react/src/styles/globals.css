@@ -1,4 +1,17 @@
 /* Global styles */
+@font-face {
+  font-family: "EdwardianCustom";
+  src: url("/fonts/Edwardian.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.edwardian {
+  font-family: "EdwardianCustom", cursive !important;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 * {
     margin: 0px;
     box-sizing: border-box;
@@ -8,7 +21,7 @@
     --red: #8b0e05;
     --orange: rgb(189, 97, 0);
     --cream: #e6dece;
-    --grey: rgb(82, 87, 83);
+    --grey: rgb(117, 121, 118);
 }
 
 body {
