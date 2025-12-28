@@ -95,7 +95,7 @@
 
 .edwardian {
   font-size: 2.5rem;  
-  color: var(--grey);
+  color: rgb(158, 154, 154);
   font-weight: 400;
   letter-spacing: 4px;
 }
