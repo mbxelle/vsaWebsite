@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "about": "About Us",
+    "events": "Events",
+    "execs": "Execs",
+    "archive": "Archive"
+  },
+  "header": {
+    "title": "Vietnamese Student Association",
+    "subtitle": "Toronto Metropolitan University",
+    "button": "About Us"
+  },
+  "about": {
+    "title": "about us",
+    "description": "We’re a student-led community dedicated to celebrating and sharing Vietnamese culture through events, food, language, and friendships. Whether you’re Vietnamese or just curious, everyone is welcome to learn, connect, and have fun with us! Stay tuned for our events!"
+  },
+  "events": {
+    "title": "our events",
+    "upcoming_title": "upcoming events",
+    "happening_now": "Happening now",
+    "get_tickets": "Get Tickets",
+    "get_tickets_now": "Get Tickets Now!",
+    "ticker_announcement": "🎟 Orientation Night: Sept 12, 6–9pm @ Tecumseh Auditorium | Fun activities across 3 regions of Vietnam ✈️ Complete your passport to enter the raffle! Top prize: LEGO set 🧱, matcha kit, skincare bundle, disposable camera, snacks, coffee card.",
+    "ticker_follow": "Follow us on Instagram @torontometvsa",
+    "questions": {
+      "where": "Where is the event?",
+      "where_ans": "Tecumseh Auditorium, Sept 12, 6–9pm!",
+      "expect": "What can I expect?",
+      "expect_ans": "Travel through 3 regions of Vietnam with each region having fun games & activities where you can win stamps for your chance to a raffle entry!",
+      "raffle": "How do I enter the raffle?",
+      "raffle_ans": "Complete 3 region activities, collect stamps in your passport = raffle entry.",
+      "prizes": "Prizes?",
+      "prizes_ans": "LEGO set, matcha kit, skincare bundle, disposable camera, snacks, coffee card."
+    }
+  },
+  "execs": {
+    "title": "MEET THE TEAM",
+    "roles": {
+      "president": "President",
+      "vp": "Vice President",
+      "coVpEvents": "Co-VP of Events",
+      "df": "Director of Finance",
+      "cr":"Corporate Relations",
+      "ca": "Events/Cultural Advisor",
+      "vpm": "VP of Marketing",
+      "designer": "Graphic Designer",
+      "ccl": "Cultural Content Lead",
+      "ve": "Video Editor",
+      "wd":"Web Developer",
+      "cc": "Content Creator"
+    }
+  
+  },
+  "archive": {
+    "title": "ARCHIVE",
+    "loading": "Loading gallery…",
+    "error_head": "Heads up: The gallery feed didn’t load.",
+    "error_step1": "Ensure the Apps Script is deployed as a Web App with access Anyone.",
+    "error_step2": "Make the Drive folder/images “Anyone with the link: Viewer”.",
+    "error_step3": "Verify the APPS_SCRIPT_URL and FOLDER_ID constants.",
+    "retry": "Retry"
+  },
+  "footer": {
+    "copyright": "© Vietnamese Student Association @ Toronto Metropolitan University"
+  }
+}
+

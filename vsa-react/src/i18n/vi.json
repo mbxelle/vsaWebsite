@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "about": "Về Chúng Tôi",
+    "events": "Sự Kiện",
+    "execs": "Ban Điều Hành",
+    "archive": "Lưu Trữ"
+  },
+  "header": {
+    "title": "Hội Sinh Viên Việt Nam",
+    "subtitle": "Đại Học Toronto Metropolitan",
+    "button": "Về Chúng Tôi"
+  },
+  "about": {
+    "title": "về chúng tôi",
+    "description": "Chúng tôi là một cộng đồng do sinh viên dẫn dắt, tận tâm tôn vinh và chia sẻ văn hóa Việt Nam thông qua các sự kiện, ẩm thực, ngôn ngữ và tình bạn. Cho dù bạn là người Việt hay chỉ tò mò, mọi người đều được chào đón để học hỏi, kết nối và vui vẻ cùng chúng tôi! Hãy theo dõi các sự kiện của chúng tôi!"
+  },
+  "events": {
+    "title": "sự kiện của chúng tôi",
+    "upcoming_title": "sự kiện sắp tới",
+    "happening_now": "Đang diễn ra",
+    "get_tickets": "Mua Vé",
+    "get_tickets_now": "Mua Vé Ngay!",
+    "ticker_announcement": "🎟 Đêm Định Hướng: 12 tháng 9, 6–9 giờ tối @ Tecumseh Auditorium | Các hoạt động thú vị trên 3 miền Việt Nam ✈️ Hoàn thành hộ chiếu của bạn để tham gia bốc thăm! Giải thưởng lớn: Bộ LEGO 🧱, bộ matcha, gói chăm sóc da, máy ảnh dùng một lần, đồ ăn nhẹ, thẻ cà phê.",
+    "ticker_follow": "Theo dõi chúng tôi trên Instagram @torontometvsa",
+    "questions": {
+      "where": "Sự kiện ở đâu?",
+      "where_ans": "Tecumseh Auditorium, 12 tháng 9, 6–9 giờ tối!",
+      "expect": "Tôi có thể mong đợi điều gì?",
+      "expect_ans": "Du hành qua 3 miền Việt Nam với mỗi miền có các trò chơi và hoạt động vui nhộn, nơi bạn có thể giành được tem để có cơ hội nhận một phiếu bốc thăm!",
+      "raffle": "Làm thế nào để tôi tham gia bốc thăm?",
+      "raffle_ans": "Hoàn thành 3 hoạt động vùng miền, thu thập tem trong hộ chiếu = tham gia bốc thăm.",
+      "prizes": "Giải thưởng?",
+      "prizes_ans": "Bộ LEGO, bộ matcha, gói chăm sóc da, máy ảnh dùng một lần, đồ ăn nhẹ, thẻ cà phê."
+    }
+  },
+  "execs": {
+    "title": "GẶP GỠ ĐỘI NGŨ",
+    "roles": {
+      "president": "Chủ tịch",
+      "vp": "Phó chủ tịch",
+      "designer": "Thiết kế đồ họa"
+    }
+  },
+  "archive": {
+    "title": "LƯU TRỮ",
+    "loading": "Đang tải thư viện…",
+    "error_head": "Lưu ý: Không thể tải nguồn cấp dữ liệu thư viện.",
+    "error_step1": "Đảm bảo Apps Script được triển khai dưới dạng Ứng dụng web với quyền truy cập cho Mọi người.",
+    "error_step2": "Đặt thư mục/hình ảnh Drive thành “Bất kỳ ai có liên kết: Người xem”.",
+    "error_step3": "Xác minh các hằng số APPS_SCRIPT_URL và FOLDER_ID.",
+    "retry": "Thử lại"
+  },
+  "footer": {
+    "copyright": "© Hội Sinh Viên Việt Nam @ Đại Học Toronto Metropolitan"
+  }
+}
+
