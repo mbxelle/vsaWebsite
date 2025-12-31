@@ -106,39 +106,45 @@ h3 {
 }
 
 
-/*Spotify Dock Styles */
+/*Spotify Dock Styles - compact Spotify dock in the corner */
 .spotify-dock {
   position: fixed;
-  left: 16px;
   right: 16px;
   bottom: 16px;
   z-index: 9999;
 
-  display: flex;
-  justify-content: center;
+  width: 300px;         
+  opacity: 0.85;        
 
-  background: rgba(0, 0, 0, 0.85);
-  border-radius: 16px;
-  padding: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 14px;
+  padding: 8px;
+
+  transition: opacity 0.3s ease;
 }
 
-/* Make the embed fill the dock nicely */
+/* Make it fully visible on hover */
+.spotify-dock:hover {
+  opacity: 1;
+}
+
+/* Spotify iframe itself */
 .spotify-dock__player {
   width: 100%;
-  max-width: 700px; /* keeps it looking clean on large screens */
-  border-radius: 12px;
+  height: 80px;          /* compact Spotify player */
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-/* Mobile: reduce height so it doesn’t cover too much */
 @media (max-width: 768px) {
   .spotify-dock {
-    left: 10px;
+    width: 240px;
     right: 10px;
     bottom: 10px;
-    padding: 10px;
   }
 
   .spotify-dock__player {
-    height: 260px;
+    height: 72px;
   }
 }
+

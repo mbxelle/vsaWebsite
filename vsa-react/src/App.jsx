@@ -6,7 +6,7 @@ import EventsSection from "./components/events/EventSection.jsx";
 import Execs from "./components/Execs.jsx";
 import Archive from "./components/Archive.jsx";
 import Footer from "./components/Footer.jsx";
-import SpotifyDock from "./components/SpotifyDock.jsx";
+
 
 export default function App() {
   return (
@@ -22,9 +22,6 @@ export default function App() {
       <Execs />
       <Archive />
       <Footer />
-
-      {/* sticky Spotify playlist (stays visible while scrolling) */}
-      <SpotifyDock />
     </>
   );
 }
