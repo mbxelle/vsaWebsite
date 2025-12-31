@@ -106,3 +106,39 @@ h3 {
 }
 
 
+/*Spotify Dock Styles */
+.spotify-dock {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+/* Make the embed fill the dock nicely */
+.spotify-dock__player {
+  width: 100%;
+  max-width: 700px; /* keeps it looking clean on large screens */
+  border-radius: 12px;
+}
+
+/* Mobile: reduce height so it doesn’t cover too much */
+@media (max-width: 768px) {
+  .spotify-dock {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+  }
+
+  .spotify-dock__player {
+    height: 260px;
+  }
+}

@@ -6,11 +6,15 @@ import EventsSection from "./components/events/EventSection.jsx";
 import Execs from "./components/Execs.jsx";
 import Archive from "./components/Archive.jsx";
 import Footer from "./components/Footer.jsx";
+import SpotifyDock from "./components/SpotifyDock.jsx";
 
 export default function App() {
   return (
-    <div>
+    <>
+      {/* floating mascot */}
       <MascotFollower src="/banban.png" />
+
+      {/* main site content */}
       <Navbar />
       <Header />
       <About />
@@ -18,6 +22,9 @@ export default function App() {
       <Execs />
       <Archive />
       <Footer />
-    </div>
+
+      {/* sticky Spotify playlist (stays visible while scrolling) */}
+      <SpotifyDock />
+    </>
   );
 }
