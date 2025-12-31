@@ -1,5 +1,8 @@
 /* navbar */
 nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 5rem;
     background-color: var(--red);
@@ -39,7 +42,7 @@ nav a:hover {
 }
 
 nav .nav_img {
-    float: left;
+    float: none;
     height: 80px;
     display: flex;
     align-items: center;
@@ -49,6 +52,21 @@ nav .nav_img {
 #vsa_logo {
     height: 100px;
 }
+
+.nav-spotify iframe {
+    width: 320px;
+    max-width: 40vw;
+    height: 80px;
+    border-radius: 12px;
+}
+
+.nav-spotify {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* language toggle */
 .lang-buttons {
@@ -93,4 +111,14 @@ nav .nav_img {
 .translate-bubble:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .nav-spotify {
+        display: none;
+    }
+
+    nav a {
+        padding: 1.2em;
+    }
 }

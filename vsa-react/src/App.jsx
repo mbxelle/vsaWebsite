@@ -7,10 +7,14 @@ import Execs from "./components/Execs.jsx";
 import Archive from "./components/Archive.jsx";
 import Footer from "./components/Footer.jsx";
 
+
 export default function App() {
   return (
-    <div>
+    <>
+      {/* floating mascot */}
       <MascotFollower src="/banban.png" />
+
+      {/* main site content */}
       <Navbar />
       <Header />
       <About />
@@ -18,6 +22,6 @@ export default function App() {
       <Execs />
       <Archive />
       <Footer />
-    </div>
+    </>
   );
 }

@@ -114,9 +114,15 @@ function Archive() {
                 >
                   <img
                     src={item.thumb}
-                    alt={item.caption || item.name || "Gallery image"}
+                    alt={item.name || "Gallery image"}
                     loading="lazy"
+                    onError={(e) => {
+                      if (e.currentTarget.src !== item.full) e.currentTarget.src = item.full;
+                    }}
                   />
+
+
+
                 </a>
                 {item.caption && (
                   <div className="caption">
