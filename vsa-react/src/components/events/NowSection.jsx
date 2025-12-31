@@ -3,6 +3,10 @@ import { useTranslation } from "react-i18next";
 
 export default function NowSection() {
   const { t } = useTranslation();
+
+  // CHANGE THIS (true or false) when you have a real "happening now" event
+  const HAS_HAPPENING_NOW = false;
+
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
   const bubbleRef = useRef(null);
@@ -18,6 +22,8 @@ export default function NowSection() {
   const prev = () => setIndex((i) => (i - 1 + SLIDES.length) % SLIDES.length);
 
   useEffect(() => {
+    if (!HAS_HAPPENING_NOW) return; // don't run carousel if nothing is live
+
     const prefersReduced =
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -51,14 +57,28 @@ export default function NowSection() {
         bubble.removeEventListener("mouseleave", startAuto);
       }
     };
-  }, []);
+  }, [HAS_HAPPENING_NOW]);
 
   const slide = SLIDES[index];
 
+  // NO HAPPENING NOW MODE 
+  if (!HAS_HAPPENING_NOW) {
+    return (
+      <section className="now-section">
+        <h2 id="now-title">{t("events.happening_now")}</h2>
+        <p className="now-empty-text">
+          Check out our recent events on our socials!
+        </p>
+
+      </section>
+    );
+  }
+
+  // HAPPENING NOW MODE 
   return (
     <section className="now-section">
       <h2 id="now-title">{t("events.happening_now")}</h2>
-      {/* link to get tickets for happening now event */}
+
       <a
         href="https://eventbrite.com/your-happening-now-link"
         className="event-btn btn-now"
@@ -67,27 +87,21 @@ export default function NowSection() {
       >
         {t("events.get_tickets_now")}
       </a>
+
       <img src="/event-poster.png" alt="event-poster" />
+
       <div className="info-bubble" ref={bubbleRef}>
-        <button
-          className="bubble-prev"
-          type="button"
-          aria-label="Previous"
-          onClick={prev}
-        >
+        <button className="bubble-prev" type="button" aria-label="Previous" onClick={prev}>
           &lt;
         </button>
+
         <div className="bubble-text">
           <span className="bubble-question">{slide.q}</span>
           <br />
           {slide.a}
         </div>
-        <button
-          className="bubble-next"
-          type="button"
-          aria-label="Next"
-          onClick={next}
-        >
+
+        <button className="bubble-next" type="button" aria-label="Next" onClick={next}>
           &gt;
         </button>
       </div>

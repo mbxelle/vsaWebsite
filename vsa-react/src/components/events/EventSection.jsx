@@ -26,12 +26,12 @@ export default function EventsSection() {
           <h2 id="upcoming-title">{t("events.upcoming_title")}</h2>
 
           <EventCard
-            name="Testing testing"
-            desc="Play games and collect stamps for your chance to win awesome prizes!"
-            time="6pm – 9pm @ Tecumseh Auditorium"
-            month="september"
-            day="12"
-            ticketsUrl="https://www.eventbrite.com/e/orientation-event-tickets-123456789"
+            name="Tet"
+            desc="TET EVENT COMIING SOON! Stay tuned in on our socials for more details!"
+            time="coming soon!"
+            month="soon"
+            day="soon"
+            ticketsUrl=""
           />
 
           <div className="blur">

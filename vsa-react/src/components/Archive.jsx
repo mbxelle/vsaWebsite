@@ -36,8 +36,9 @@ function Archive() {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      if (!Array.isArray(data?.items)) throw new Error("Bad payload");
-      setItems(data.items);
+      const list = Array.isArray(data?.items) ? data.items : Array.isArray(data?.images) ? data.images : null;
+      if (!list) throw new Error("Bad payload");
+      setItems(list);
     } catch (err) {
       console.error(err);
       setError(err);
