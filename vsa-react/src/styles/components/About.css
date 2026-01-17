@@ -96,12 +96,12 @@
     justify-content: center;
     gap: 20px;
     position: relative;
-    z-index: 9999;
+    z-index: 2;
 }
 
 .social-icons a {
     position: relative;
-    z-index: 9999;
+    z-index: 2;
     pointer-events: auto;
 }
 
@@ -113,7 +113,7 @@
     border: 2px solid var(--grey);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    z-index: 9999;
+    z-index: 2;
     background: none;
     pointer-events: auto;
 }

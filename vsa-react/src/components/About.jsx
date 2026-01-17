@@ -53,7 +53,7 @@ function AboutSection() {
         />
         <blockquote
           className="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/reel/DGkBnB4ONEp/"
+          data-instgrm-permalink="https://www.instagram.com/reel/DQVlNFMjY9-/"
           data-instgrm-version="14"
         />
         <blockquote
