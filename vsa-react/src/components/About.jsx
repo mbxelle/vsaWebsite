@@ -44,6 +44,7 @@ function AboutSection() {
           <img src="/grey_linkedin.png" alt="LinkedIn logo" />
         </a>
       </div>
+      
       <div className="about-instagram" aria-label="Instagram feed">
         <blockquote
           className="instagram-media"
