@@ -20,6 +20,32 @@ function escapeHtml(s = "") {
   });
 }
 
+/* -------------------- ADDED HELPERS (Drive fix) -------------------- */
+
+function driveIdFromUrl(url = "") {
+  const m1 = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if (m1) return m1[1];
+  const m2 = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if (m2) return m2[1];
+  return null;
+}
+
+function toDriveFull(url = "") {
+  const id = driveIdFromUrl(url);
+  return id ? `https://drive.google.com/uc?export=view&id=${id}` : url;
+}
+
+function toDriveThumb(url = "", size = "w1024") {
+  const id = driveIdFromUrl(url);
+  return id ? `https://drive.google.com/thumbnail?id=${id}&sz=${size}` : url;
+}
+
+function isImageFile(name = "") {
+  return /\.(jpe?g|png|gif|webp|bmp|avif)$/i.test(name);
+}
+
+/* ------------------------------------------------------------------ */
+
 function Archive() {
   const { t } = useTranslation();
   const [items, setItems] = useState(null); // null = loading, [] = loaded no items
@@ -36,7 +62,11 @@ function Archive() {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      const list = Array.isArray(data?.items) ? data.items : Array.isArray(data?.images) ? data.images : null;
+      const list = Array.isArray(data?.items)
+        ? data.items
+        : Array.isArray(data?.images)
+        ? data.images
+        : null;
       if (!list) throw new Error("Bad payload");
       setItems(list);
     } catch (err) {
@@ -104,33 +134,41 @@ function Archive() {
         {/* gallery grid */}
         {!error && Array.isArray(items) && (
           <div id="gallery" className="grid">
-            {items.map((item) => (
-              <div className="card" key={item.id}>
-                <a
-                  href={item.full}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={escapeHtml(item.name || "")}
-                >
-                  <img
-                    src={item.thumb}
-                    alt={item.name || "Gallery image"}
-                    loading="lazy"
-                    onError={(e) => {
-                      if (e.currentTarget.src !== item.full) e.currentTarget.src = item.full;
-                    }}
-                  />
+            {items
+              .filter((item) => isImageFile(item.name))
+              .map((item) => {
+                const fullUrl = toDriveFull(item.full || "");
+                const thumbUrl = toDriveThumb(
+                  item.thumb || item.full || "",
+                  THUMB_SIZE
+                );
 
+                return (
+                  <div className="card" key={item.id}>
+                    <a
+                      href={fullUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={item.name || ""}
+                    >
+                      <img
+                        src={thumbUrl}
+                        alt={item.name || "Gallery image"}
+                        loading="lazy"
+                        onError={(e) => {
+                          if (e.currentTarget.src !== fullUrl) {
+                            e.currentTarget.src = fullUrl;
+                          }
+                        }}
+                      />
+                    </a>
 
-
-                </a>
-                {item.caption && (
-                  <div className="caption">
-                    {escapeHtml(item.caption)}
+                    {item.caption && (
+                      <div className="caption">{item.caption}</div>
+                    )}
                   </div>
-                )}
-              </div>
-            ))}
+                );
+              })}
           </div>
         )}
       </div>
