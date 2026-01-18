@@ -20,31 +20,24 @@ function escapeHtml(s = "") {
   });
 }
 
-/* -------------------- ADDED HELPERS (Drive fix) -------------------- */
-
 function driveIdFromUrl(url = "") {
+  if (!url) return null;
+
   const m1 = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
   if (m1) return m1[1];
+
   const m2 = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
   if (m2) return m2[1];
+
+  if (/^[a-zA-Z0-9_-]{20,}$/.test(url)) return url;
+
   return null;
 }
 
-function toDriveFull(url = "") {
+function toPublicImg(url = "", size = "w1024") {
   const id = driveIdFromUrl(url);
-  return id ? `https://drive.google.com/uc?export=view&id=${id}` : url;
+  return id ? `https://lh3.googleusercontent.com/d/${id}=${size}` : url;
 }
-
-function toDriveThumb(url = "", size = "w1024") {
-  const id = driveIdFromUrl(url);
-  return id ? `https://drive.google.com/thumbnail?id=${id}&sz=${size}` : url;
-}
-
-function isImageFile(name = "") {
-  return /\.(jpe?g|png|gif|webp|bmp|avif)$/i.test(name);
-}
-
-/* ------------------------------------------------------------------ */
 
 function Archive() {
   const { t } = useTranslation();
@@ -134,41 +127,44 @@ function Archive() {
         {/* gallery grid */}
         {!error && Array.isArray(items) && (
           <div id="gallery" className="grid">
-            {items
-              .filter((item) => isImageFile(item.name))
-              .map((item) => {
-                const fullUrl = toDriveFull(item.full || "");
-                const thumbUrl = toDriveThumb(
-                  item.thumb || item.full || "",
-                  THUMB_SIZE
-                );
+            {items.map((item) => {
+              const fullUrl = toPublicImg(item.full || item.thumb || "", "w2048");
+              const thumbUrl = toPublicImg(item.thumb || item.full || "", THUMB_SIZE);
 
-                return (
-                  <div className="card" key={item.id}>
-                    <a
-                      href={fullUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={item.name || ""}
-                    >
-                      <img
-                        src={thumbUrl}
-                        alt={item.name || "Gallery image"}
-                        loading="lazy"
-                        onError={(e) => {
-                          if (e.currentTarget.src !== fullUrl) {
-                            e.currentTarget.src = fullUrl;
-                          }
-                        }}
-                      />
-                    </a>
+              return (
+                <div className="card" key={item.id}>
+                  <a
+                    href={fullUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={escapeHtml(item.name || "")}
+                  >
+                    <img
+                      src={thumbUrl}
+                      alt={item.name || "Gallery image"}
+                      loading="lazy"
+                      onError={(e) => {
+                        const img = e.currentTarget;
 
-                    {item.caption && (
-                      <div className="caption">{item.caption}</div>
-                    )}
-                  </div>
-                );
-              })}
+                        if (img.dataset.retried !== "1") {
+                          img.dataset.retried = "1";
+                          setTimeout(() => {
+                            img.src = thumbUrl;
+                          }, 900);
+                          return;
+                        }
+
+                        if (img.src !== fullUrl) img.src = fullUrl;
+                      }}
+                    />
+                  </a>
+
+                  {item.caption && (
+                    <div className="caption">{escapeHtml(item.caption)}</div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
       </div>

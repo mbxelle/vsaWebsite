@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 export default function NowSection() {
   const { t } = useTranslation();
 
-  // CHANGE THIS (true or false) when you have a real "happening now" event
-  const HAS_HAPPENING_NOW = false;
+  // CHANGE THIS (true or false) when you have a real "happening now" event and graphic poster
+  const HAS_HAPPENING_NOW = true;
 
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
@@ -67,7 +67,7 @@ export default function NowSection() {
       <section className="now-section">
         <h2 id="now-title">{t("events.happening_now")}</h2>
         <p className="now-empty-text">
-          Check out our recent events on our socials!
+          Check out recent events on our socials!
         </p>
 
       </section>
