@@ -20,8 +20,8 @@
     "happening_now": "Happening now",
     "get_tickets": "Get Tickets",
     "get_tickets_now": "Get Tickets Now!",
-    "ticker_announcement": "🎟 Orientation Night: Sept 12, 6–9pm @ Tecumseh Auditorium | Fun activities across 3 regions of Vietnam ✈️ Complete your passport to enter the raffle! Top prize: LEGO set 🧱, matcha kit, skincare bundle, disposable camera, snacks, coffee card.",
-    "ticker_follow": "Follow us on Instagram @torontometvsa",
+    "ticker_announcement": "TET EVENT: Feb 16, 6–9pm @ Tecumseh Auditorium | Come celebrate the Lunar New Year with us! 🎉🧧 ",
+    "ticker_follow": "Follow us on Instagram @torontometvsa and TikTok @tmuvsa for the latest updates!",
     "questions": {
       "where": "Where is the event?",
       "where_ans": "Tecumseh Auditorium, Sept 12, 6–9pm!",
@@ -47,7 +47,9 @@
       "ccl": "Cultural Content Lead",
       "ve": "Video Editor",
       "wd":"Web Developer",
-      "cc": "Content Creator"
+      "cc": "Content Creator",
+      "corporateA": "Corporate Associate",
+      "ea": "Events Associate"
     }
   
   },

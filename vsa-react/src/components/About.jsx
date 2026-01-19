@@ -44,6 +44,7 @@ function AboutSection() {
           <img src="/grey_linkedin.png" alt="LinkedIn logo" />
         </a>
       </div>
+      
       <div className="about-instagram" aria-label="Instagram feed">
         <blockquote
           className="instagram-media"
@@ -52,7 +53,7 @@ function AboutSection() {
         />
         <blockquote
           className="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/reel/DGkBnB4ONEp/"
+          data-instgrm-permalink="https://www.instagram.com/reel/DQVlNFMjY9-/"
           data-instgrm-version="14"
         />
         <blockquote

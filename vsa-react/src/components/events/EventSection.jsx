@@ -26,11 +26,11 @@ export default function EventsSection() {
           <h2 id="upcoming-title">{t("events.upcoming_title")}</h2>
 
           <EventCard
-            name="Tet"
+            name="TET EVENT"
             desc="TET EVENT COMIING SOON! Stay tuned in on our socials for more details!"
-            time="coming soon!"
-            month="soon"
-            day="soon"
+            time="6 - 9pm @ Tecumseh Auditorium"
+            month="February"
+            day="16"
             ticketsUrl=""
           />
 

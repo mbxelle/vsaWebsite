@@ -20,6 +20,25 @@ function escapeHtml(s = "") {
   });
 }
 
+function driveIdFromUrl(url = "") {
+  if (!url) return null;
+
+  const m1 = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if (m1) return m1[1];
+
+  const m2 = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if (m2) return m2[1];
+
+  if (/^[a-zA-Z0-9_-]{20,}$/.test(url)) return url;
+
+  return null;
+}
+
+function toPublicImg(url = "", size = "w1024") {
+  const id = driveIdFromUrl(url);
+  return id ? `https://lh3.googleusercontent.com/d/${id}=${size}` : url;
+}
+
 function Archive() {
   const { t } = useTranslation();
   const [items, setItems] = useState(null); // null = loading, [] = loaded no items
@@ -36,7 +55,11 @@ function Archive() {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      const list = Array.isArray(data?.items) ? data.items : Array.isArray(data?.images) ? data.images : null;
+      const list = Array.isArray(data?.items)
+        ? data.items
+        : Array.isArray(data?.images)
+        ? data.images
+        : null;
       if (!list) throw new Error("Bad payload");
       setItems(list);
     } catch (err) {
@@ -104,27 +127,44 @@ function Archive() {
         {/* gallery grid */}
         {!error && Array.isArray(items) && (
           <div id="gallery" className="grid">
-            {items.map((item) => (
-              <div className="card" key={item.id}>
-                <a
-                  href={item.full}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={escapeHtml(item.name || "")}
-                >
-                  <img
-                    src={item.thumb}
-                    alt={item.caption || item.name || "Gallery image"}
-                    loading="lazy"
-                  />
-                </a>
-                {item.caption && (
-                  <div className="caption">
-                    {escapeHtml(item.caption)}
-                  </div>
-                )}
-              </div>
-            ))}
+            {items.map((item) => {
+              const fullUrl = toPublicImg(item.full || item.thumb || "", "w2048");
+              const thumbUrl = toPublicImg(item.thumb || item.full || "", THUMB_SIZE);
+
+              return (
+                <div className="card" key={item.id}>
+                  <a
+                    href={fullUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={escapeHtml(item.name || "")}
+                  >
+                    <img
+                      src={thumbUrl}
+                      alt={item.name || "Gallery image"}
+                      loading="lazy"
+                      onError={(e) => {
+                        const img = e.currentTarget;
+
+                        if (img.dataset.retried !== "1") {
+                          img.dataset.retried = "1";
+                          setTimeout(() => {
+                            img.src = thumbUrl;
+                          }, 900);
+                          return;
+                        }
+
+                        if (img.src !== fullUrl) img.src = fullUrl;
+                      }}
+                    />
+                  </a>
+
+                  {item.caption && (
+                    <div className="caption">{escapeHtml(item.caption)}</div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
       </div>

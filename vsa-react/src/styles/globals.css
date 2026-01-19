@@ -106,3 +106,45 @@ h3 {
 }
 
 
+/*Spotify Dock Styles - compact Spotify dock in the corner */
+.spotify-dock {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+
+  width: 300px;         
+  opacity: 0.85;        
+
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 14px;
+  padding: 8px;
+
+  transition: opacity 0.3s ease;
+}
+
+/* Make it fully visible on hover */
+.spotify-dock:hover {
+  opacity: 1;
+}
+
+/* Spotify iframe itself */
+.spotify-dock__player {
+  width: 100%;
+  height: 80px;          /* compact Spotify player */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .spotify-dock {
+    width: 240px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .spotify-dock__player {
+    height: 72px;
+  }
+}
+
