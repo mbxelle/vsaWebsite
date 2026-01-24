@@ -23,8 +23,7 @@ It features a clean design with an emphasis on **semantic HTML**, **WCAG accessi
 ## 🧠 Technologies Used
 | Category | Technologies |
 |-----------|---------------|
-| **Frontend** | HTML5, CSS3 (Flexbox + Grid), JavaScript (ES6+) |
-| **Framework (in progress)** | React.js, Bootstrap |
+| **Frontend** | HTML5, CSS3 (Flexbox + Grid), JavaScript (ES6+), React, Node.js |
 | **Design & Structure** | Semantic HTML, CSS variables, WCAG accessibility |
 | **Version Control** | Git & GitHub |
 | **Deployment** | GitHub Pages |
@@ -40,15 +39,6 @@ It features a clean design with an emphasis on **semantic HTML**, **WCAG accessi
 ✅ Organized sectioning (`About Us`, `Execs`, `Events`,`Archive`, `Footer`)
 
 ---
-
-## 🧩 Upcoming Enhancements
-✅ fully Mobile-first, responsive design using CSS Grid and Flexbox  
-🛠️ Integrating **React** for dynamic rendering and smoother navigation  
-✨ Expanding **JavaScript functionality** (animations, filtering, eventcards)  
-- updating member cards with photoshoot pictures (expected October 25th)
-📱 Improving **mobile responsiveness** across multiple breakpoints  
-💬 Adding **interactive elements** (event signup forms, gallery carousel)  
-🎨 Refining UI/UX with hover effects and modern transitions
 
 
 
