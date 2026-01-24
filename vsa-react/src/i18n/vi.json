@@ -37,8 +37,19 @@
     "title": "GẶP GỠ ĐỘI NGŨ",
     "roles": {
       "president": "Chủ tịch",
-      "vp": "Phó chủ tịch",
-      "designer": "Thiết kế đồ họa"
+      "vp": "Phó Chủ tịch",
+      "coVpEvents": "Đồng Phó Chủ tịch Sự kiện",
+      "df": "Giám đốc Tài chính",
+      "cr": "Quan hệ Doanh nghiệp",
+      "ca": "Cố vấn Văn hóa / Sự kiện",
+      "vpm": "Phó Chủ tịch Marketing",
+      "designer": "Thiết kế Đồ họa",
+      "ccl": "Trưởng Nội dung Văn hóa",
+      "ve": "Biên tập Video",
+      "wd": "Lập trình viên Web",
+      "cc": "Nhà sáng tạo Nội dung",
+      "corporateA": "Cộng tác viên Doanh nghiệp",
+      "ea": "Cộng tác viên Sự kiện"
     }
   },
   "archive": {
@@ -54,4 +65,3 @@
     "copyright": "© Hội Sinh Viên Việt Nam @ Đại Học Toronto Metropolitan"
   }
 }
-

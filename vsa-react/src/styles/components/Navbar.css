@@ -1,124 +1,183 @@
 /* navbar */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 5rem;
-    background-color: var(--red);
-    z-index: 10;
-    position: fixed;
-    top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+  background-color: var(--red);
+  z-index: 10;
+  position: fixed;
+  top: 0;
 }
 
 a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: inherit;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: inherit;
 }
 
 nav a {
-    padding: 2em;
-    text-decoration: none;
-    color: var(--cream);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    transition: text-shadow 0.5 ease-in;
+  padding: 2em;
+  text-decoration: none;
+  color: var(--cream);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: text-shadow 0.5 ease-in;
 }
 
 nav a:hover {
-    text-shadow: 0 0 5px #ffffff;
+  text-shadow: 0 0 5px #ffffff;
 }
 
 nav .nav_img {
-    float: none;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
+  float: none;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
 }
 
 #vsa_logo {
-    height: 100px;
+  height: 100px;
 }
 
 .nav-spotify iframe {
-    width: 320px;
-    max-width: 40vw;
-    height: 80px;
-    border-radius: 12px;
+  width: 320px;
+  max-width: 40vw;
+  height: 80px;
+  border-radius: 12px;
 }
 
 .nav-spotify {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
 }
-
 
 /* language toggle */
 .lang-buttons {
-    display: flex;
-    gap: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .lang-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 2px solid var(--grey);
-    background: #fff8e6;
-    cursor: pointer;
-    font-size: 18px;
-    transition: transform 0.2s ease, background 0.2s ease;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--grey);
+  background: #fff8e6;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .lang-btn:hover {
-    transform: scale(1.1);
-    background: #fbd98a;
+  transform: scale(1.1);
+  background: #fbd98a;
 }
 
-/* language toggle bubble (not strictly needed in React now, but keep for parity) */
 .translate-bubble {
-    position: relative;
-    background: #fff8e6;
-    border-radius: 20px;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px;
-    transition: transform 0.2s ease;
+  position: relative;
+  background: #fff8e6;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  transition: transform 0.2s ease;
 }
 
 .translate-bubble:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 768px) {
-    .nav-spotify {
-        display: none;
-    }
+/* mobile menu button (hidden on desktop) */
+.mobile-btn {
+  display: none;
+}
 
-    nav a {
-        padding: 1.2em;
-    }
+/* mobile dropdown (rendered by React only when open, hidden on desktop just in case) */
+.mobile-dropdown {
+  display: none;
+}
+
+.mobile-dropdown iframe {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  /* hide center spotify on mobile */
+  .nav-spotify {
+    display: none;
+  }
+    nav ul {
+    display: none;
+  }
+
+
+
+  nav ul .lang-buttons {
+    display: none;
+  }
+
+  /* tighten link padding so they fit better */
+  nav a {
+    padding: 1.2em;
+  }
+
+  /* show hamburger */
+  .mobile-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--cream);
+    background: transparent;
+    color: var(--cream);
+    font-size: 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
+  }
+
+  /* dropdown panel (only appears when React renders it: open === true) */
+  .mobile-dropdown {
+    display: block;
+    position: absolute;
+    top: 5rem; /* nav height */
+    right: 1rem;
+    background: var(--red);
+    padding: 12px;
+    border-radius: 12px;
+    width: 90vw;
+    max-width: 360px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
 }
