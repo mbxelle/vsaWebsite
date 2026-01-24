@@ -26,43 +26,44 @@ export default function EventsSection() {
           <h2 id="upcoming-title">{t("events.upcoming_title")}</h2>
 
           <EventCard
-            name="TET EVENT"
-            desc="TET EVENT COMIING SOON! Stay tuned in on our socials for more details!"
-            time="6 - 9pm @ Tecumseh Auditorium"
-            month="February"
+            name={t("events.tet.name")}
+            desc={t("events.tet.desc")}
+            time={t("events.tet.time")}
+            month={t("events.tet.month")}
             day="16"
             ticketsUrl=""
           />
 
           <div className="blur">
             <EventCard
-              name="mid-autumn gala"
-              desc="Mooncakes, music, and performances!"
-              time="6pm – 9pm"
-              month="october"
+              name={t("events.mid_autumn.name")}
+              desc={t("events.mid_autumn.desc")}
+              time={t("events.mid_autumn.time")}
+              month={t("events.mid_autumn.month")}
               day="1"
             />
+
             <EventCard
-              name="study jam"
-              desc="Quiet space + coffee. Bring friends!"
-              time="2pm – 4pm"
-              month="october"
+              name={t("events.study_jam.name")}
+              desc={t("events.study_jam.desc")}
+              time={t("events.study_jam.time")}
+              month={t("events.study_jam.month")}
               day="15"
             />
           </div>
         </section>
       </div>
 
-      {/* right column: happening now with info bubble functionality */}
+      {/* right column */}
       <NowSection />
 
       {/* bottom ticker */}
       <div className="news-ticker-bottom" aria-label="Announcements">
         <div className="ticker-track">
-          <span>Follow us on Instagram @torontometvsa</span>
+          <span>{t("events.ticker_follow")}</span>
         </div>
         <div className="ticker-track">
-          <span>Follow us on Instagram @torontometvsa</span>
+          <span>{t("events.ticker_follow")}</span>
         </div>
       </div>
     </section>

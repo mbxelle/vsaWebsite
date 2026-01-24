@@ -20,7 +20,7 @@
     "happening_now": "Đang diễn ra",
     "get_tickets": "Mua Vé",
     "get_tickets_now": "Mua Vé Ngay!",
-    "ticker_announcement": "🎟 Đêm Định Hướng: 12 tháng 9, 6–9 giờ tối @ Tecumseh Auditorium | Các hoạt động thú vị trên 3 miền Việt Nam ✈️ Hoàn thành hộ chiếu của bạn để tham gia bốc thăm! Giải thưởng lớn: Bộ LEGO 🧱, bộ matcha, gói chăm sóc da, máy ảnh dùng một lần, đồ ăn nhẹ, thẻ cà phê.",
+    "ticker_announcement": "SỰ KIỆN TẾT: 16/2, 6–9 giờ tối tại Hội trường Tecumseh | Cùng chúng mình chào đón Tết Nguyên Đán nhé! 🎉🧧",
     "ticker_follow": "Theo dõi chúng tôi trên Instagram @torontometvsa",
     "questions": {
       "where": "Sự kiện ở đâu?",
@@ -31,6 +31,24 @@
       "raffle_ans": "Hoàn thành 3 hoạt động vùng miền, thu thập tem trong hộ chiếu = tham gia bốc thăm.",
       "prizes": "Giải thưởng?",
       "prizes_ans": "Bộ LEGO, bộ matcha, gói chăm sóc da, máy ảnh dùng một lần, đồ ăn nhẹ, thẻ cà phê."
+    },
+    "tet": {
+      "name": "SỰ KIỆN TẾT",
+      "desc": "SỰ KIỆN TẾT SẮP DIỄN RA! Theo dõi mạng xã hội để biết thêm chi tiết!",
+      "time": "6–9 giờ tối tại Hội trường Tecumseh",
+      "month": "Tháng 2"
+    },
+    "mid_autumn": {
+      "name": "Đêm hội Trung Thu",
+      "desc": "Bánh trung thu, âm nhạc và các tiết mục biểu diễn!",
+      "time": "6–9 giờ tối",
+      "month": "Tháng 10"
+    },
+    "study_jam": {
+      "name": "Study Jam",
+      "desc": "Không gian học tập yên tĩnh + cà phê. Rủ bạn bè cùng tham gia!",
+      "time": "2–4 giờ chiều",
+      "month": "Tháng 10"
     }
   },
   "execs": {

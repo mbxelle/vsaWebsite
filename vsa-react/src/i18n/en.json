@@ -14,6 +14,10 @@
     "title": "about us",
     "description": "We’re a student-led community dedicated to celebrating and sharing Vietnamese culture through events, food, language, and friendships. Whether you’re Vietnamese or just curious, everyone is welcome to learn, connect, and have fun with us! Stay tuned for our events!"
   },
+
+
+
+
   "events": {
     "title": "our events",
     "upcoming_title": "upcoming events",
@@ -31,10 +35,32 @@
       "raffle_ans": "Complete 3 region activities, collect stamps in your passport = raffle entry.",
       "prizes": "Prizes?",
       "prizes_ans": "LEGO set, matcha kit, skincare bundle, disposable camera, snacks, coffee card."
-    }
+    },
+  "tet": {
+    "name": "TET EVENT",
+    "desc": "TET EVENT COMING SOON! Stay tuned on our socials for more details!",
+    "time": "6–9pm @ Tecumseh Auditorium",
+    "month": "February"
   },
+
+  "mid_autumn": {
+    "name": "Mid-Autumn Gala",
+    "desc": "Mooncakes, music, and performances!",
+    "time": "6–9pm",
+    "month": "October"
+  },
+
+  "study_jam": {
+    "name": "Study Jam",
+    "desc": "Quiet space + coffee. Bring friends!",
+    "time": "2–4pm",
+    "month": "October"
+  }
+},
+
   "execs": {
     "title": "MEET THE TEAM",
+
     "roles": {
       "president": "President",
       "vp": "Vice President",
