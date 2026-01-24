@@ -1,7 +1,7 @@
 # Vietnamese Student Association (VSA) Website 
 
 
-https://mbxelle.github.io/vsaWebsite/
+[https://mbxelle.github.io/vsaWebsite/](https://courageous-muffin-3b03b7.netlify.app/)
 
 
 A modern, responsive, and accessible website built for the **Vietnamese Student Association at Toronto Metropolitan University (TMU)**. The site is designed to showcase events, executive members, and community initiatives, while maintaining cultural identity and accessibility across all devices.
