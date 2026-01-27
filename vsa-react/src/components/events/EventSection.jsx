@@ -24,7 +24,7 @@ export default function EventsSection() {
       <div className="events">
         <section className="upcoming-section">
           <h2 id="upcoming-title">{t("events.upcoming_title")}</h2>
-
+          <div className="blur">
           <EventCard
             name={t("events.tet.name")}
             desc={t("events.tet.desc")}
@@ -34,21 +34,21 @@ export default function EventsSection() {
             ticketsUrl=""
           />
 
-          <div className="blur">
+          
             <EventCard
               name={t("events.mid_autumn.name")}
               desc={t("events.mid_autumn.desc")}
               time={t("events.mid_autumn.time")}
               month={t("events.mid_autumn.month")}
-              day="1"
+              day="25"
             />
 
             <EventCard
               name={t("events.study_jam.name")}
               desc={t("events.study_jam.desc")}
-              time={t("events.study_jam.time")}
+              time={t("events.study_jam..time")}
               month={t("events.study_jam.month")}
-              day="15"
+              day="12"
             />
           </div>
         </section>

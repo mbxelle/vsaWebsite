@@ -34,9 +34,9 @@ export default function Execs() {
       members: [
         { name: "Jessica Hang", role: t("execs.roles.coVpEvents"), imgSrc: "/execs/JESSICA.JPG" },
         { name: "Stephen Nguyen", role: t("execs.roles.coVpEvents"), imgSrc: "/execs/STEPHEN.jpg" },
-        { name: "Carmen Choy", role: t("execs.roles.ea"), imgSrc: "/execs/" },
-        { name: "Calvin Truong", role: t("execs.roles.ea"), imgSrc: "/execs/" },
-        { name: "Kimmy Nguyen", role: t("execs.roles.ea"), imgSrc: "/execs/" }
+        { name: "Carmen Choy", role: t("execs.roles.ea"), imgSrc: "/execs/CARMEN.JPG" },
+        { name: "Calvin Truong", role: t("execs.roles.ea"), imgSrc: "/execs/CALVIN.JPG" },
+        { name: "Kimmy Nguyen", role: t("execs.roles.ea"), imgSrc: "/execs/KIMMY.JPG" }
       ],
     },
     {
@@ -50,8 +50,8 @@ export default function Execs() {
         { name: "Ivy Vu", role: t("execs.roles.ve"), imgSrc: "/execs/IVY.jpg" },
         { name: "Michelle Bui", role: t("execs.roles.wd"), imgSrc: "/execs/MICHELLE.JPG" },
         { name: "Presly Trinh", role: t("execs.roles.cc"), imgSrc: "/execs/PRESLEY.jpg" },
-        { name: "Hang Do", role: t("execs.roles.cc"), imgSrc: "/execs/" },
-        { name: "Wendy Truong", role: t("execs.roles.cc"), imgSrc: "/execs/" }
+        { name: "Hang Do", role: t("execs.roles.cc"), imgSrc: "/execs/HANG.JPG"},
+        { name: "Wendy Truong", role: t("execs.roles.cc"), imgSrc: "/execs/WENDY.JPG" }
       ],
     },
   ];
