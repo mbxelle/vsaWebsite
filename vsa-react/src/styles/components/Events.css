@@ -224,29 +224,31 @@
 }
 
 .event-btn {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 6px 12px;
-    color: rgb(12, 7, 7);
+    background-color: #fff8e6;
+    padding: 20px 30px;
+    color: rgb(143, 104, 59);
     font-family: "Montserrat", sans-serif;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
-    border: 1px solid var(--grey);
-    border-radius: 6px;
+    border: 3px solid var(--red);
+    border-radius: 999px;
     text-decoration: none;
     transition: background 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 6px rgb(52, 51, 46);
     position: relative;
     z-index: 3;
     margin: 0;
-    /* Removed auto margins */
 }
 
 .event-btn:hover {
-    background-color: var(--grey);
+    background-color:#fff8e6;
     transform: scale(1.05);
-    color: white;
+    color: rgb(231, 208, 109);
 }
 
 .blur {
@@ -259,7 +261,7 @@
     gap: 16px;
     width: 100%;
 }
-    
+
 /* happening now */
 .now-section {
     grid-area: 3 / 2 / 4 / 3;
@@ -306,6 +308,67 @@
     height: auto;
     object-fit: cover;
 }
+
+.tet-event-title {
+  position: relative;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.0rem, 3vw, 1.8rem);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  background: #fff8e6;
+
+  border-radius: 999px;
+  padding: 12px 26px;
+  margin: 45px 0 20px 0;
+  width: fit-content;
+
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.12);
+  color: var(--red);
+  overflow: visible;
+}
+
+/* ✨ Sparkles (top left & right) */
+.tet-event-title::before {
+  content: "🧧 ✨ ";
+  position: absolute;
+  top: -22px;
+  left: -28px;
+  font-size: 20px;
+  animation: sparkleFloat 2.5s ease-in-out infinite;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.35));
+}
+
+.tet-event-title::after {
+  content: " ✨ 🧧";
+  position: absolute;
+  top: -22px;
+  right: -28px;
+  font-size: 20px;
+  animation: sparkleFloat 2.5s ease-in-out infinite 1s;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.35));
+}
+
+.tet-event-title span::before {
+  left: -26px;
+  animation-delay: 0.5s;
+}
+
+.tet-event-title span::after {
+  right: -26px;
+  animation-delay: 1.2s;
+}
+
+/*floating animation */
+@keyframes sparkleFloat {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.9; }
+  50% { transform: translateY(-8px) scale(1.2); opacity: 1; }
+}
+
+
+
 
 /* FAQ bubble */
 .info-bubble {
@@ -361,3 +424,53 @@
 .bubble-next:hover {
     background: #5f2b2b;
 }
+
+@media (max-width: 768px) {
+
+  .now-section {
+    padding-top: 100px; /* pushes content lower in the column */
+  }
+
+  /* Bigger Tết badge */
+  .tet-event-title {
+    font-size: 2.4rem;
+    padding: 18px 28px;
+   border: none;
+    margin: 60px 0 25px 0;
+  }
+
+
+  .tet-event-title::before {
+ display: none;
+  }
+    .tet-event-title::after {
+ display: none;
+  }
+
+  /* Bigger CTA button */
+  .event-btn.btn-now {
+    font-size: 1.9rem;
+    padding: 20px 26px;
+    width: 90%;
+    max-width: 360px;
+    border-width: 4px;
+    border-radius: 4-px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+#happening-now-title {
+    box-shadow: 0 6px 6px rgb(52, 51, 46);
+  }
+
+  }
+  .tet-event-title {
+    font-size: 2.6rem;
+  }
+
+  .event-btn.btn-now {
+    font-size: 2.1rem;
+    padding: 24px 20px;
+  }
+

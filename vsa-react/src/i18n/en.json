@@ -14,70 +14,66 @@
     "title": "about us",
     "description": "We’re a student-led community dedicated to celebrating and sharing Vietnamese culture through events, food, language, and friendships. Whether you’re Vietnamese or just curious, everyone is welcome to learn, connect, and have fun with us! Stay tuned for our events!"
   },
-
-
-
-
   "events": {
     "title": "our events",
     "upcoming_title": "upcoming events",
     "happening_now": "Happening now",
     "get_tickets": "Get Tickets",
     "get_tickets_now": "Get Tickets Now!",
-    "ticker_announcement": "TET EVENT: Feb 16, 6–9pm @ Tecumseh Auditorium | Come celebrate the Lunar New Year with us! 🎉🧧 ",
+    "tet_event_title": "TMVSA Tết Event",
+    "now_signup": "SIGN UP FOR OUR TET EVENT NOW!",
+    "ticker_announcement": "TET EVENT: Feb 12, 6–9pm @ Tecumseh Auditorium | SIGN UP NOW | Come celebrate the Lunar New Year with us! | Fun games, Photobooth, Yummy Food and Lots of Prizes to Win... What more can you ask for! SIGN UP NOW! 🎉🧧 ",
     "ticker_follow": "Follow us on Instagram @torontometvsa and TikTok @tmuvsa for the latest updates!",
+
     "questions": {
       "where": "Where is the event?",
-      "where_ans": "Tecumseh Auditorium, Sept 12, 6–9pm!",
+      "where_ans": "Tecumseh Auditorium, Feb 12, 6–9pm!",
       "expect": "What can I expect?",
-      "expect_ans": "Travel through 3 regions of Vietnam with each region having fun games & activities where you can win stamps for your chance to a raffle entry!",
+      "expect_ans": "",
       "raffle": "How do I enter the raffle?",
-      "raffle_ans": "Complete 3 region activities, collect stamps in your passport = raffle entry.",
+      "raffle_ans": "",
       "prizes": "Prizes?",
-      "prizes_ans": "LEGO set, matcha kit, skincare bundle, disposable camera, snacks, coffee card."
+      "prizes_ans": ""
     },
-  "tet": {
-    "name": "TET EVENT",
-    "desc": "TET EVENT COMING SOON! Stay tuned on our socials for more details!",
-    "time": "6–9pm @ Tecumseh Auditorium",
-    "month": "February"
+
+    "tet": {
+      "name": "TET EVENT",
+      "desc": "TET EVENT COMING SOON! SIGN UP NOW!!!! STAY TUNED ON OUR SOCIALS FOR MORE INFO!",
+      "time": "6–9pm @ Tecumseh Auditorium",
+      "month": "February",
+      "day": "12"
+    },
+    "mid_autumn": {
+      "name": "Mid-Autumn Gala",
+      "desc": "Mooncakes, music, and performances!",
+      "time": "6–9pm",
+      "month": "October"
+    },
+    "study_jam": {
+      "name": "Study Jam",
+      "desc": "Quiet space + coffee. Bring friends!",
+      "time": "2–4pm",
+      "month": "October"
+    }
   },
-
-  "mid_autumn": {
-    "name": "Mid-Autumn Gala",
-    "desc": "Mooncakes, music, and performances!",
-    "time": "6–9pm",
-    "month": "October"
-  },
-
-  "study_jam": {
-    "name": "Study Jam",
-    "desc": "Quiet space + coffee. Bring friends!",
-    "time": "2–4pm",
-    "month": "October"
-  }
-},
-
   "execs": {
     "title": "MEET THE TEAM",
-
     "roles": {
       "president": "President",
       "vp": "Vice President",
       "coVpEvents": "Co-VP of Events",
       "df": "Director of Finance",
-      "cr":"Corporate Relations",
+      "cr": "Corporate Relations",
       "ca": "Events/Cultural Advisor",
       "vpm": "VP of Marketing",
       "designer": "Graphic Designer",
       "ccl": "Cultural Content Lead",
       "ve": "Video Editor",
-      "wd":"Web Developer",
+      "wd": "Web Developer",
       "cc": "Content Creator",
       "corporateA": "Corporate Associate",
       "ea": "Events Associate"
     }
-  
   },
   "archive": {
     "title": "ARCHIVE",
@@ -92,4 +88,3 @@
     "copyright": "© Vietnamese Student Association @ Toronto Metropolitan University"
   }
 }
-

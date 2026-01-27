@@ -34,7 +34,7 @@ export default function Execs() {
       members: [
         { name: "Jessica Hang", role: t("execs.roles.coVpEvents"), imgSrc: "/execs/JESSICA.JPG" },
         { name: "Stephen Nguyen", role: t("execs.roles.coVpEvents"), imgSrc: "/execs/STEPHEN.jpg" },
-        { name: "Carmon Choy", role: t("execs.roles.ea"), imgSrc: "/execs/" },
+        { name: "Carmen Choy", role: t("execs.roles.ea"), imgSrc: "/execs/" },
         { name: "Calvin Truong", role: t("execs.roles.ea"), imgSrc: "/execs/" },
         { name: "Kimmy Nguyen", role: t("execs.roles.ea"), imgSrc: "/execs/" }
       ],

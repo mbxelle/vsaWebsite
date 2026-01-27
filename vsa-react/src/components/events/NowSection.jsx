@@ -5,7 +5,7 @@ export default function NowSection() {
   const { t } = useTranslation();
 
   // CHANGE THIS (true or false) when you have a real "happening now" event and graphic poster
-  const HAS_HAPPENING_NOW = false;
+  const HAS_HAPPENING_NOW = true;
 
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
@@ -76,21 +76,24 @@ export default function NowSection() {
 
   // HAPPENING NOW MODE 
   return (
-    <section className="now-section">
-      <h2 id="now-title">{t("events.happening_now")}</h2>
+  <section className="now-section">
+    <h2 id="now-title">{t("events.happening_now")}</h2>
 
-      <a
-        href="https://eventbrite.com/your-happening-now-link"
-        className="event-btn btn-now"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {t("events.get_tickets_now")}
-      </a>
+    <p className="tet-event-title">{t("events.tet_event_title")}</p>
 
-      <img src="/event-poster.png" alt="event-poster" />
+    <a
+      href="https://eventbrite.com/your-happening-now-link"
+      className="event-btn btn-now"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {t("events.get_tickets_now")}
+    </a>
+    {/*NOTE: EVENT POSTER BELOW*/}
+     {/*<img src="/event-poster.png" alt="event-poster" />*/}
 
-      <div className="info-bubble" ref={bubbleRef}>
+  {/*NOTE: EVENT FAQ BELOW*/}
+     {/*  <div className="info-bubble" ref={bubbleRef}>
         <button className="bubble-prev" type="button" aria-label="Previous" onClick={prev}>
           &lt;
         </button>
@@ -104,7 +107,7 @@ export default function NowSection() {
         <button className="bubble-next" type="button" aria-label="Next" onClick={next}>
           &gt;
         </button>
-      </div>
+      </div>*/}
     </section>
   );
 }

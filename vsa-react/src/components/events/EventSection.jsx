@@ -30,7 +30,7 @@ export default function EventsSection() {
             desc={t("events.tet.desc")}
             time={t("events.tet.time")}
             month={t("events.tet.month")}
-            day="16"
+            day={t("events.tet.day")}
             ticketsUrl=""
           />
 

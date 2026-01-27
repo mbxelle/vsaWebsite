@@ -20,7 +20,9 @@
     "happening_now": "Đang diễn ra",
     "get_tickets": "Mua Vé",
     "get_tickets_now": "Mua Vé Ngay!",
-    "ticker_announcement": "SỰ KIỆN TẾT: 16/2, 6–9 giờ tối tại Hội trường Tecumseh | Cùng chúng mình chào đón Tết Nguyên Đán nhé! 🎉🧧",
+    "tet_event_title": "Sự Kiện Tết TMVSA",
+    "now_signup": "ĐĂNG KÝ SỰ KIỆN TẾT NGAY BÂY GIỜ!",
+    "ticker_announcement": "SỰ KIỆN TẾT: 16/2, 6–9 giờ tối tại Hội trường Tecumseh | ĐĂNG KÝ NGAY | Cùng chúng mình chào đón Tết Nguyên Đán nhé! | Trò chơi vui nhộn, photobooth, đồ ăn ngon và rất nhiều phần quà hấp dẫn đang chờ đón bạn… Còn chờ gì nữa, ĐĂNG KÝ NGAY! 🎉🧧",
     "ticker_follow": "Theo dõi chúng tôi trên Instagram @torontometvsa",
     "questions": {
       "where": "Sự kiện ở đâu?",
@@ -34,7 +36,7 @@
     },
     "tet": {
       "name": "SỰ KIỆN TẾT",
-      "desc": "SỰ KIỆN TẾT SẮP DIỄN RA! Theo dõi mạng xã hội để biết thêm chi tiết!",
+      "desc": "SỰ KIỆN TẾT SẮP DIỄN RA! ĐĂNG KÝ NGAY!!!! THEO DÕI MẠNG XÃ HỘI CỦA CHÚNG MÌNH ĐỂ BIẾT THÊM THÔNG TIN!",
       "time": "6–9 giờ tối tại Hội trường Tecumseh",
       "month": "Tháng 2"
     },

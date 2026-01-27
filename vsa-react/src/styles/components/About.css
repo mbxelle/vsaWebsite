@@ -123,3 +123,16 @@
     transform: scale(1.1);
     box-shadow: 0 0 30px white;
 }
+
+/* Hide Instagram feed on tablets and phones */
+@media (max-width: 1024px) {
+  .about .about-instagram {
+    display: none ;
+  }
+  
+
+#anchor1 {
+border: none;
+box-shadow: 0 6px 6px rgb(52, 51, 46);
+}
+}
