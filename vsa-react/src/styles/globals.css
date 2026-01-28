@@ -1,7 +1,7 @@
 /* Global styles */
 @font-face {
   font-family: "EdwardianCustom";
-  src: url("/fonts/Edwardian.ttf") format("truetype");
+  src: url("/fonts/edwardian.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

@@ -36,20 +36,20 @@
       "prizes_ans": ""
     },
 
-    "tet": {
+    "widget1": {
       "name": "TET EVENT",
       "desc": "TET EVENT COMING SOON! SIGN UP NOW!!!! STAY TUNED ON OUR SOCIALS FOR MORE INFO!",
       "time": "6–9pm @ Tecumseh Auditorium",
       "month": "February",
       "day": "00"
     },
-    "mid_autumn": {
+    "widget2": {
       "name": "Mid-Autumn Gala",
       "desc": "Mooncakes, music, and performances!",
       "time": "6–9pm",
       "month": "October"
     },
-    "study_jam": {
+    "widget3": {
       "name": "Study Jam",
       "desc": "Quiet space + coffee. Bring friends!",
       "time": "2–4pm",
