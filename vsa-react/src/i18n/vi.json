@@ -22,11 +22,11 @@
     "get_tickets_now": "Mua Vé Ngay!",
     "tet_event_title": "Sự Kiện Tết TMVSA",
     "now_signup": "ĐĂNG KÝ SỰ KIỆN TẾT NGAY BÂY GIỜ!",
-    "ticker_announcement": "SỰ KIỆN TẾT: 16/2, 6–9 giờ tối tại Hội trường Tecumseh | ĐĂNG KÝ NGAY | Cùng chúng mình chào đón Tết Nguyên Đán nhé! | Trò chơi vui nhộn, photobooth, đồ ăn ngon và rất nhiều phần quà hấp dẫn đang chờ đón bạn… Còn chờ gì nữa, ĐĂNG KÝ NGAY! 🎉🧧",
+    "ticker_announcement": "SỰ KIỆN TẾT: 23/2, 6–9 giờ tối tại Hội trường Tecumseh | ĐĂNG KÝ NGAY | Cùng chúng mình chào đón Tết Nguyên Đán nhé! | Trò chơi vui nhộn, photobooth, đồ ăn ngon và rất nhiều phần quà hấp dẫn đang chờ đón bạn… Còn chờ gì nữa, ĐĂNG KÝ NGAY! 🎉🧧",
     "ticker_follow": "Theo dõi chúng tôi trên Instagram @torontometvsa",
     "questions": {
       "where": "Sự kiện ở đâu?",
-      "where_ans": "Tecumseh Auditorium, 12 tháng 9, 6–9 giờ tối!",
+      "where_ans": "Tecumseh Auditorium, 23 tháng 2, 6–9 giờ tối!",
       "expect": "Tôi có thể mong đợi điều gì?",
       "expect_ans": "Du hành qua 3 miền Việt Nam với mỗi miền có các trò chơi và hoạt động vui nhộn, nơi bạn có thể giành được tem để có cơ hội nhận một phiếu bốc thăm!",
       "raffle": "Làm thế nào để tôi tham gia bốc thăm?",
@@ -38,7 +38,8 @@
       "name": "SỰ KIỆN TẾT",
       "desc": "SỰ KIỆN TẾT SẮP DIỄN RA! ĐĂNG KÝ NGAY!!!! THEO DÕI MẠNG XÃ HỘI CỦA CHÚNG MÌNH ĐỂ BIẾT THÊM THÔNG TIN!",
       "time": "6–9 giờ tối tại Hội trường Tecumseh",
-      "month": "Tháng 2"
+      "month": "Tháng 2",
+      "day": "23"
     },
     "widget2": {
       "name": "Đêm hội Trung Thu",

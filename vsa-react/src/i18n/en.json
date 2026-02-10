@@ -27,13 +27,9 @@
 
     "questions": {
       "where": "Where is the event?",
-      "where_ans": "Tecumseh Auditorium, Feb 12, 6–9pm!",
+      "where_ans": "Tecumseh Auditorium, Feb 23, 6–9pm!",
       "expect": "What can I expect?",
-      "expect_ans": "",
-      "raffle": "How do I enter the raffle?",
-      "raffle_ans": "",
-      "prizes": "Prizes?",
-      "prizes_ans": ""
+      "expect_ans": ""
     },
 
     "widget1": {
@@ -41,7 +37,7 @@
       "desc": "TET EVENT COMING SOON! SIGN UP NOW!!!! STAY TUNED ON OUR SOCIALS FOR MORE INFO!",
       "time": "6–9pm @ Tecumseh Auditorium",
       "month": "February",
-      "day": "00"
+      "day": "23"
     },
     "widget2": {
       "name": "Mid-Autumn Gala",

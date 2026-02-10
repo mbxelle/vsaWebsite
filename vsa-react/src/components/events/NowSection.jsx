@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 export default function NowSection() {
   const { t } = useTranslation();
 
-  // CHANGE THIS (true or false) when you have a real "happening now" event and graphic poster
-  const HAS_HAPPENING_NOW = false;
+  // CHANGE THIS (true or false) when you have a "happening now" event
+  const HAS_HAPPENING_NOW = true;
 
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
@@ -82,7 +82,7 @@ export default function NowSection() {
     <p className="tet-event-title">{t("events.tet_event_title")}</p>
 
     <a
-      href="https://eventbrite.com/your-happening-now-link"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSckuF-gqMiuyH-tLx1GPiWp2EJqnF736dzNMX-hABvTn28DbA/viewform?usp=publish-editors"
       className="event-btn btn-now"
       target="_blank"
       rel="noopener noreferrer"
