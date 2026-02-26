@@ -5,7 +5,7 @@ export default function NowSection() {
   const { t } = useTranslation();
 
   // CHANGE THIS (true or false) when you have a "happening now" event
-  const HAS_HAPPENING_NOW = true;
+  const HAS_HAPPENING_NOW = false;
 
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
