@@ -22,8 +22,12 @@
     "get_tickets_now": "Get Tickets Now!",
     "tet_event_title": "TMVSA Tết Event",
     "now_signup": "SIGN UP FOR OUR TET EVENT NOW!",
-    "ticker_announcement": "📣 VSA is recruiting new members! Applications are now open—visit our Events page to apply.",
+    "ticker_announcement": "📣 VSA is recruiting new members! Applications are now open! Visit our Events page to apply.",
     "ticker_follow": "Follow us on Instagram @torontometvsa and TikTok @tmuvsa for the latest updates! 📣 VSA is recruiting new members! Applications are now open—visit our Events page to apply.",
+
+
+    "join_team_title": "Join the TMVSA Family!",
+    "join_team_button": "Apply Now",
 
     "questions": {
       "where": "Where is the event?",
@@ -38,6 +42,9 @@
       "time": "6–9pm @ Tecumseh Auditorium",
       "month": "February",
       "day": "23"
+
+
+
     },
     "widget2": {
       "name": "Mid-Autumn Gala",
