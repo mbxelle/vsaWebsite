@@ -47,8 +47,8 @@ export default function Header() {
           rel="noopener noreferrer"
           style={{
             display: "inline-block",
-            background: "#fff47d",
-            color: "#7E1E12",
+            background: "#ffe0a3",
+            color: "#da5b00",
             textDecoration: "none",
             padding: "14px 34px",
             borderRadius: "999px",
