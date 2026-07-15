@@ -66,10 +66,19 @@ export default function NowSection() {
     return (
       <section className="now-section">
         <h2 id="now-title">{t("events.happening_now")}</h2>
-        <p className="now-empty-text">
-          Check out recent events on our socials!
+        <p className="tet-event-title">
+           Join the TMVSA Family!
         </p>
 
+
+  <a
+  href="https://forms.gle/51DpDbq921EwXCDLA"
+  className="event-btn btn-now"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Apply Now
+</a>
       </section>
     );
   }

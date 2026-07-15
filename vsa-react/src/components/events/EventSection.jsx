@@ -25,7 +25,6 @@ export default function EventsSection() {
         <section className="upcoming-section">
           <h2 id="upcoming-title">{t("events.upcoming_title")}</h2>
 
-          
           <div className="blur">
           <EventCard
             name={t("events.widget1.name")}
