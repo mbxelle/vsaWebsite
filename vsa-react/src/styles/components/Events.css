@@ -441,7 +441,7 @@
 
 
   .tet-event-title::before {
- display: none;
+ display: none; 
   }
     .tet-event-title::after {
  display: none;
